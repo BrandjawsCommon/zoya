@@ -1,0 +1,430 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -----------ScrollBar-Start------- */
+::-webkit-scrollbar {
+  @apply w-0;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-200;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+/* -----------ScrollBar-End------- */
+
+/* Reset Css Start */
+
+body {
+  @apply font-raleway bg-themeSoftPeach;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.animate {
+  transition: 0.6s all ease-in-out;
+}
+
+.Fast_animate {
+  transition: 0.3s all ease-in-out;
+}
+
+.Btn {
+  @apply border border-themeLapisBlue rounded-[50px] font-semibold px-10 py-2 text-lg !text-white overflow-hidden animate font-raleway inline-block relative;
+}
+
+.Btn::before {
+  content: "";
+  @apply w-full h-full bg-themeLapisBlue left-0 right-0 bottom-0 animate absolute -z-[1];
+}
+
+.Btn:hover::before {
+  content: "";
+  @apply -bottom-full animate;
+}
+
+.transparentBtn {
+  @apply border border-themeLapisBlue rounded-[50px] px-10 py-2 font-semibold text-lg overflow-hidden !text-themeLapisBlue bg-transparent animate font-raleway inline-block relative;
+}
+
+.transparentBtn:hover {
+  @apply !text-white animate;
+}
+
+.transparentBtn::before {
+  content: "";
+  @apply w-full h-full bg-transparent left-0 right-0 -bottom-full animate absolute -z-[1];
+}
+
+.transparentBtn:hover::before {
+  content: "";
+  @apply bottom-0 bg-themeLapisBlue animate;
+}
+
+.Btn:hover {
+  @apply !text-themeLapisBlue bg-white animate;
+}
+
+.navigation ul li a {
+  @apply text-lg text-themeLapisBlue font-medium capitalize hover:text-themeDarkBeige Fast_animate;
+}
+
+h1 {
+  @apply text-[80px] leading-[1.2];
+}
+
+h2 {
+  @apply text-[60px] leading-[1.2];
+}
+
+h3 {
+  @apply text-[50px] leading-[1.2] font-medium;
+}
+
+h4 {
+  @apply text-[44px] leading-[1.2] font-medium;
+}
+
+h5 {
+  @apply text-[28px] leading-[1.2];
+}
+
+h6 {
+  @apply text-[24px] leading-[1.2];
+}
+
+.Icons a {
+  @apply w-[50px] h-[50px] text-xl bg-themeDarkBeige text-white border border-themeDarkBeige hover:bg-transparent hover:text-themeDarkBeige animate flex justify-center items-center rounded-full;
+}
+
+/* Reset Css End Here */
+
+.paragraph {
+  @apply font-raleway text-[20px] leading-[1.3];
+}
+.container {
+  @apply max-w-[1370px] w-full m-auto px-4;
+}
+
+/* Header Css Start */
+
+.navigation a.Btn {
+  @apply !block;
+}
+
+.Fixed_Icons a {
+  @apply bg-themeLapisBlue hover:bg-white hover:text-themeLapisBlue border hover:border-white border-themeLapisBlue;
+}
+
+#nav-toggle {
+  display: inline-block;
+  position: relative;
+  display: flex;
+  min-height: 46px;
+  justify-content: center;
+}
+
+#nav-toggle span {
+  margin-top: 10px;
+}
+
+.Btn:hover#nav-toggle span,
+.Btn:hover#nav-toggle span:before,
+.Btn:hover#nav-toggle span:after {
+  @apply bg-themeLapisBlue;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  width: 30px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: "";
+}
+
+#nav-toggle span:before {
+  top: -2px;
+  height: 2px;
+}
+
+#nav-toggle span:after {
+  bottom: -10px;
+  height: 2px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  transition: 0.2s all ease-in-out;
+}
+
+#nav-toggle.active span {
+  background-color: transparent;
+}
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+  top: 0;
+}
+
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+/* Header Css Close */
+
+/* About Team Section Start */
+
+.teamMember {
+  @apply overflow-hidden transition-all duration-1000
+}
+
+.teamMember:hover .teamGradient {
+  @apply top-auto h-[120px] bg-[#213A6F]
+}
+
+.teamMember:hover .arrow {
+  @apply ml-[20px]
+}
+
+/* About Team Section CLose */
+
+/* Banner Css Start */
+
+.Banner h1 span {
+  opacity: 0.5;
+}
+
+.overlay::before {
+  content: "";
+  @apply absolute h-full w-full bg-black opacity-55 left-0 right-0 top-0 bottom-0 z-[2];
+}
+
+/* Banner Css Close */
+
+/* About Section Css Start */
+
+.subHeading {
+  @apply relative pl-28;
+}
+.subHeading::before {
+  content: "";
+  @apply absolute left-0 w-20 h-[1px] bg-themeDarkBeige top-[16px];
+}
+
+/* About Section Css Close */
+
+/* Register Section Css Start */
+
+form .flex input,
+form textarea {
+  width: calc(50% - 20px);
+  @apply py-3 px-5 text-base font-medium border font-raleway border-themeDarkBeige rounded-[40px] bg-transparent outline-none text-black;
+}
+
+form textarea {
+  @apply w-full;
+}
+
+form .flex input::placeholder {
+  @apply text-black opacity-30  font-raleway;
+}
+
+/* Register Section Css Close */
+
+/* Footer Css Start */
+
+.Footer_Menu a {
+  @apply text-xl text-white font-medium hover:text-themeDarkBeige Fast_animate;
+}
+
+.Footer_Menu ul {
+  @apply flex flex-col gap-3;
+}
+
+
+.footer_Form {
+  @apply border border-themeDarkBeige bg-[#A89C6C14] rounded-full p-2 flex mt-9;
+}
+
+.footer_Form input {
+  @apply outline-none px-2 text-white bg-transparent w-full;
+}
+
+.footer_Form input::placeholder {
+  @apply text-[#ffffff4f];
+}
+
+
+.footer_Form button {
+  @apply border border-themeDarkBeige rounded-full text-themeDarkBeige py-3 px-10 hover:text-white hover:bg-themeDarkBeige Fast_animate;
+}
+
+/* Footer Css Close */
+
+/* responsive Css Start */
+
+@media(max-width: 1320px){
+  .Footer_upper {
+    @apply flex-wrap;
+  }
+
+  .Footer_upper .footer_Block {
+    @apply !w-[25%];
+  }
+
+  .Logo_Section {
+    @apply w-[40%];
+  }
+
+  .Footer_upper .footer_Block.Newsletter {
+    @apply !w-full; 
+  }
+}
+
+@media (max-width: 1024px) {
+  .HeaderLinks h3 {
+    @apply text-[30px];
+  }
+
+  .Header_Bottom_Bar .Our-Policies a {
+    @apply text-[22px] leading-[1.4];
+  }
+
+  .Header_Bottom_Bar .Our-Policies ul li {
+    @apply mb-[15px];
+  }
+}
+
+@media (max-width: 991px) {
+  h1 {
+    @apply text-[65px];
+  }
+
+  h2 {
+    @apply text-[60px];
+  }
+
+  h3 {
+    @apply text-[50px];
+  }
+
+  h4 {
+    @apply text-[42px];
+  }
+
+  h6 {
+    @apply text-[24px];
+  }
+
+  .hide_Br h2 {
+    @apply text-[34px];
+  }
+
+  .hide_Br br {
+    @apply hidden;
+  }
+
+  .Main-Menu .container {
+    @apply justify-center;
+  }
+
+  .navigation ul li a {
+    @apply text-sm;
+  }
+  form .flex {
+    @apply gap-5;
+  }
+  form .flex.my-8 {
+    @apply my-5;
+  }
+  form .flex input,
+  form textarea {
+    @apply !w-full;
+  }
+  .Connect_page h1 {
+    @apply text-[60px] leading-[1.3];
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    @apply text-[50px];
+  }
+
+  h2 {
+    @apply text-[46px];
+  }
+
+  h3 {
+    @apply text-[42px];
+  }
+
+  h4 {
+    @apply text-[38px];
+  }
+
+  h6 {
+    @apply text-[24px];
+  }
+
+  .hide_Br h2 {
+    @apply text-[40px];
+  }
+  .hide_Br br {
+    @apply hidden;
+  }
+
+  .mb_Hidden {
+    @apply hidden;
+  }
+
+  #nav-toggle.active span:before,
+  #nav-toggle.active span:after {
+    @apply top-[2px] Fast_animate;
+  }
+
+  .Main-Menu a {
+    @apply !text-[46px] !leading-[1.3];
+  }
+  .Main-Menu a.Btn {
+    @apply !text-[30px] !leading-[1.3];
+  }
+
+  .Footer_upper .footer_Block,.Logo_Section {
+    @apply !w-full p-0;
+  }
+
+  .form_Section .Inner_Section {
+    @apply w-full p-0;
+  }
+
+  .Connect_page h1 {
+    @apply text-[46px] leading-[1.3];
+  }
+}
+
+@media (max-width: 410px) {
+  .about_img {
+    @apply !w-[90%];
+  }
+}
+
+/* Responsive Css Close */
