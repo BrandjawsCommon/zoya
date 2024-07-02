@@ -7,7 +7,6 @@ import { FaArrowRight } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
