@@ -10,6 +10,8 @@ import Link from "next/link";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const Index = () => {
   return (
@@ -18,7 +20,8 @@ const Index = () => {
         <title>Home - Zoya</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-
+      
+      <Header/>
       {/* Banner Section */}
       <section className="w-full h-[80vh] lg:h-screen Banner relative">
         <video
@@ -350,6 +353,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 };

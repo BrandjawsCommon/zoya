@@ -10,10 +10,13 @@ import Link from "next/link";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const press_detail = () => {
   return (
     <>
+    <Header/>
       {/* Banner Section Start */}
       <section className="w-full h-[70vh] Banner relative Banner_overlay">
         <img src="/Detail_Banner.png" class="w-full h-full object-cover"></img>
@@ -279,6 +282,7 @@ const press_detail = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 };

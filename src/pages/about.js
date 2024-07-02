@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 
 const About = () => {
@@ -8,7 +10,7 @@ const About = () => {
         <>
 
             {/* Banner Section */}
-
+            <Header/>
             <section className="w-full h-[70vh] Banner relative">
                 <video
                     src="/Banner.mp4"
@@ -464,7 +466,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-
+            <Footer/>
         </>
     )
 }

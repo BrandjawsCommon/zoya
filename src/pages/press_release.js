@@ -6,12 +6,14 @@ import { FaArrowRight } from "react-icons/fa6";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const press_release = () => {
   return (
     <>
       {/* Banner Section */}
-
+      <Header/>
       <section className="w-full h-[70vh] Banner relative Banner_overlay">
         <video
           src="/Press_Banner.mp4"
@@ -173,6 +175,7 @@ const press_release = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 };
