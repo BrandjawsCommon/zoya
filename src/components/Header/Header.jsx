@@ -35,7 +35,7 @@ const Header = () => {
                   <Link href="#.">Projects</Link>
                 </li>
                 <li>
-                  <Link href="#.">Press Release</Link>
+                  <Link href="/press_release">Press Release</Link>
                 </li>
                 <li>
                   <Link className="Btn" href="/connect_with_us">
@@ -74,7 +74,7 @@ const Header = () => {
                       <li
                       onClick={toggleClass}
                       >
-                        <Link href="#.">Press Release</Link>
+                        <Link href="/press_release">Press Release</Link>
                       </li>
                       <li>
                         <Link className="Btn" href="/connect_with_us">

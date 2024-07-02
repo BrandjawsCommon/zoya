@@ -1,16 +1,14 @@
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 
 
 const About = () => {
     return (
         <>
 
-        
-<Header/>
+            {/* Banner Section */}
+
             <section className="w-full h-[70vh] Banner relative">
                 <video
                     src="/Banner.mp4"
@@ -223,7 +221,11 @@ const About = () => {
                                 Leadership
                             </h2>
                             <p className="text-[16px] lg:text-[18px] leading-[21px] lg:leading-[23px] font-light text-black">
-                                At Zoya Developments, we have a visionary leadership team at the helm, guiding our direction and propelling us towards a future of innovation and excellence.
+                                At Zoya Developments, we have a
+                                visionary leadership team at the helm,
+                                guiding our direction and propelling us
+                                towards a future of innovation
+                                and excellence.
                             </p>
                         </div>
 
@@ -231,7 +233,7 @@ const About = () => {
 
                             <Link href="#." className="relative teamMember Fast_animate">
                                 <div className="relative">
-                                    <img src="/Farooq-Khan.jpg" className="w-full mb-5 bg-gradient-to" />
+                                    <img src="/Farooq-Khan.jpg" className="w-full mb-5 h-[440px] lg:h-[600px] xl:h-[390px] object-cover" />
                                     <div className="teamGradient bg-gradient-to-b from-transparent to-blue-900 w-full h-[440px] lg:h-[600px] xl:h-[390px] absolute bottom-0 Fast_animate"></div>
                                 </div>
                                 <div className="absolute bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] left-5 right-5 flex justify-between items-end">
@@ -250,8 +252,19 @@ const About = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <p className="text-[14px] lg:text-[16px] leading-normal font-light text-black mb-4">
-                                    Mr. Farooq, respected for his industry insights and business acumen, has led the group for over 20 years..
+                                <p className="text-[14px] lg:text-[16px] leading-normal font-light text-black mb-4 h-[70px] overflow-scroll scrollParagraph">
+                                    Mr. Farooq, respected for his industry insights
+                                    and business acumen, has led the group for
+                                    over 20 years. With a unique vision and global
+                                    approach, he sets high standards and
+                                    is deeply involved in every project.
+                                    A man of action, he embodies the “speak
+                                    less, do more” philosophy and skillfully
+                                    manages the group’s diverse operations. His
+                                    uncanny knowledge of the 3 M’s of real estate
+                                    development - man, machines and materials,
+                                    makes him the operational wizard and a
+                                    valuable leader.
                                 </p>
                                 <div className="flex items-center TeamButton">
                                     <div>
@@ -271,7 +284,7 @@ const About = () => {
 
                             <Link href="#." className="relative teamMember Fast_animate">
                                 <div className="relative">
-                                    <img src="/Imtiaz-Khan.jpg" className="w-full mb-5 bg-gradient-to" />
+                                    <img src="/Imtiaz-Khan.jpg" className="w-full mb-5 h-[440px] lg:h-[600px] xl:h-[390px] object-cover" />
                                     <div className="teamGradient bg-gradient-to-b from-transparent to-blue-900 w-full h-[440px] lg:h-[600px] xl:h-[390px] absolute bottom-0 Fast_animate"></div>
                                 </div>
                                 <div className="absolute bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] left-5 right-5 flex justify-between items-end">
@@ -290,8 +303,19 @@ const About = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <p className="text-[14px] lg:text-[16px] leading-normal font-light text-black mb-4">
-                                    Mr. Farooq, respected for his industry insights and business acumen, has led the group for over 20 years..
+                                <p className="text-[14px] lg:text-[16px] leading-normal font-light text-black mb-4 h-[70px] overflow-scroll scrollParagraph">
+                                    A global citizen with a youthful perspective, Mr. Imtiaz
+                                    brings a dynamic energy to Zoya Developments. His
+                                    international experience fosters a fresh approach to
+                                    business, evident in his innovative ideas and “can-do”
+                                    attitude. A natural multi-tasker with a strategic mind,
+                                    Mr. Imtiaz plays a key role in driving the company’s expansion.
+                                    His passion for project planning and strategic
+                                    development ensures his contributions are valuable
+                                    across all facets of the business. Imtiaz has a Degree
+                                    in Business Administration from Jain-CMS, India &
+                                    Specialized International Marketing Program from
+                                    Chartered Institute of Marketing, UK.
                                 </p>
                                 <div className="flex items-center TeamButton">
                                     <div>
@@ -311,7 +335,7 @@ const About = () => {
 
                             <Link href="#." className="relative teamMember Fast_animate">
                                 <div className="relative">
-                                    <img src="/Shoaib-Khan.jpg" className="w-full mb-5 bg-gradient-to" />
+                                    <img src="/Shoaib-Khan.jpg" className="w-full mb-5 h-[440px] lg:h-[600px] xl:h-[390px] object-cover" />
                                     <div className="teamGradient bg-gradient-to-b from-transparent to-blue-900 w-full h-[440px] lg:h-[600px] xl:h-[390px] absolute bottom-0 Fast_animate"></div>
                                 </div>
                                 <div className="absolute bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] left-5 right-5 flex justify-between items-end">
@@ -330,8 +354,19 @@ const About = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <p className="text-[14px] lg:text-[16px] leading-normal font-light text-black mb-4">
-                                    Mr. Farooq, respected for his industry insights and business acumen, has led the group for over 20 years..
+                                <p className="text-[14px] lg:text-[16px] leading-normal font-light text-black mb-4 h-[70px] overflow-scroll scrollParagraph">
+                                    Mr. Shoaib Khan, future-oriented leader at Zoya
+                                    Developments, champions customer focus within
+                                    the real estate landscape. His financial expertise
+                                    ensures sound investment decisions and his
+                                    commitment to continuous learning fuels
+                                    positive change.
+                                    Mr. Khan’s arrival marked a shift towards prioritizing
+                                    customer needs, reflecting Zoya’s dedication to
+                                    evolving with the market. Shoaib has a Degree
+                                    in Business Administration from the Jain-CMS
+                                    & Specialized International Practical Finance
+                                    Program, UK.
                                 </p>
                                 <div className="flex items-center TeamButton">
                                     <div>
@@ -429,7 +464,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
+
         </>
     )
 }

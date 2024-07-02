@@ -1,13 +1,10 @@
 import React from "react";
 import { FaRegEnvelope } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 
 const connect_with_us = () => {
   return (
     <>
-    <Header/>
       <section className="Connect_page py-32 pb-20">
         <div className="container">
           <h1 className="uppercase text-[100px] leading-[1.3] text-themeDarkBeige font-medium">
@@ -74,7 +71,6 @@ const connect_with_us = () => {
       <div className="map_Section bg-themeLapisBlue">
         <img className="w-full h-full" src="/map.png" />
       </div>
-      <Footer/>
     </>
   );
 };

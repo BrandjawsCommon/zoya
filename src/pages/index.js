@@ -7,10 +7,9 @@ import { FaArrowRight } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 
+// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 
 const Index = () => {
   return (
@@ -21,8 +20,6 @@ const Index = () => {
       </Head>
 
       {/* Banner Section */}
-    <Header />
-
       <section className="w-full h-[80vh] lg:h-screen Banner relative">
         <video
           src="/Banner.mp4"
@@ -98,7 +95,7 @@ const Index = () => {
         <img class="w-full h-full object-cover" src="/Portfolio.png" />
         <div className="absolute z-10 w-full bottom-[100px]">
           <div className="container">
-            <div className="flex flex-wrap md:flex-nowrap gap-7 md:gap-0 justify-between items-end">
+            {/* <div className="flex flex-wrap md:flex-nowrap gap-7 md:gap-0 justify-between items-end">
               <div className="w-full">
                 <p className="text-white text-xl">
                   A collection of apartment residences with maid’s room based in
@@ -151,7 +148,17 @@ const Index = () => {
               >
                 <FaChevronRight />
               </a>
+            </div> */}
+
+            <div>
+              <h2 className="text-themeSoftPeach font-normal uppercase">
+                PRISTINE
+              </h2>
+              <h2 className="text-[35px] lg:text-[40px] xl:text-[70px] text-white uppercase">
+                Coming Soon
+              </h2>
             </div>
+
           </div>
         </div>
       </section>
@@ -343,8 +350,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    <Footer />
-
     </>
   );
 };

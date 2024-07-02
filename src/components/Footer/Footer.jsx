@@ -48,7 +48,7 @@ const Footer = () => {
                 <a href="#.">Project</a>
               </li>
               <li>
-                <a href="#.">Press Release</a>
+                <a href="/press_release">Press Release</a>
               </li>
               <li>
                 <a href="/connect_with_us">Connect</a>
