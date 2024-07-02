@@ -8,12 +8,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import Link from "next/link";
 
 const press_release = () => {
   return (
     <>
       {/* Banner Section */}
-      <Header/>
+      <Header />
       <section className="w-full h-[70vh] Banner relative Banner_overlay">
         <video
           src="/Press_Banner.mp4"
@@ -58,124 +59,136 @@ const press_release = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <div>
-                  <img className="w-full" src="/Slide1.png" />
-                  <div className="flex justify-between mt-3">
-                    <p className="font-light text-sm">29 May, 2024</p>
-                    <p className="font-medium text-sm">REAL ESTATE</p>
+                <Link href="press_detail">
+                  <div>
+                    <img className="w-full" src="/Slide1.png" />
+                    <div className="flex justify-between mt-3">
+                      <p className="font-light text-sm">29 May, 2024</p>
+                      <p className="font-medium text-sm">REAL ESTATE</p>
+                    </div>
+                    <p className="paragraph font-medium text-black my-4 mb-3">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor..
+                    </p>
+                    <a
+                      className="font-medium text-lg !text-themeDarkBeige animate flex gap-3 items-center"
+                      href="#."
+                    >
+                      Read more <FaArrowRight />
+                    </a>
                   </div>
-                  <p className="paragraph font-medium text-black my-4 mb-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor..
-                  </p>
-                  <a
-                    className="font-medium text-lg !text-themeDarkBeige animate flex gap-3 items-center"
-                    href="#."
-                  >
-                    Read more <FaArrowRight />
-                  </a>
-                </div>
+                </Link>
               </SwiperSlide>
               <SwiperSlide>
-                <div>
-                  <img className="w-full" src="/Slide2.png" />
-                  <div className="flex justify-between mt-3">
-                    <p className="font-light text-sm">29 May, 2024</p>
-                    <p className="font-medium text-sm">REAL ESTATE</p>
+                <Link href="press_detail">
+                  <div>
+                    <img className="w-full" src="/Slide2.png" />
+                    <div className="flex justify-between mt-3">
+                      <p className="font-light text-sm">29 May, 2024</p>
+                      <p className="font-medium text-sm">REAL ESTATE</p>
+                    </div>
+                    <p className="text-lg font-medium text-black my-4 mb-3">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor..
+                    </p>
+                    <a
+                      className="font-medium text-lg !text-themeDarkBeige animate flex gap-3 items-center"
+                      href="#."
+                    >
+                      Read more <FaArrowRight />
+                    </a>
                   </div>
-                  <p className="text-lg font-medium text-black my-4 mb-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor..
-                  </p>
-                  <a
-                    className="font-medium text-lg !text-themeDarkBeige animate flex gap-3 items-center"
-                    href="#."
-                  >
-                    Read more <FaArrowRight />
-                  </a>
-                </div>
+                </Link>
               </SwiperSlide>
               <SwiperSlide>
-                <div>
-                  <img className="w-full" src="/Slide3.png" />
-                  <div className="flex justify-between mt-3">
-                    <p className="font-light text-sm">29 May, 2024</p>
-                    <p className="font-medium text-sm">REAL ESTATE</p>
+                <Link href="press_detail">
+                  <div>
+                    <img className="w-full" src="/Slide3.png" />
+                    <div className="flex justify-between mt-3">
+                      <p className="font-light text-sm">29 May, 2024</p>
+                      <p className="font-medium text-sm">REAL ESTATE</p>
+                    </div>
+                    <p className="text-lg font-medium text-black my-4 mb-3">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor..
+                    </p>
+                    <a
+                      className="font-medium text-lg !text-themeDarkBeige animate flex gap-3 items-center"
+                      href="#."
+                    >
+                      Read more <FaArrowRight />
+                    </a>
                   </div>
-                  <p className="text-lg font-medium text-black my-4 mb-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor..
-                  </p>
-                  <a
-                    className="font-medium text-lg !text-themeDarkBeige animate flex gap-3 items-center"
-                    href="#."
-                  >
-                    Read more <FaArrowRight />
-                  </a>
-                </div>
+                </Link>
               </SwiperSlide>
               <SwiperSlide>
-                <div>
-                  <img className="w-full" src="/Slide4.png" />
-                  <div className="flex justify-between mt-3">
-                    <p className="font-light text-sm">29 May, 2024</p>
-                    <p className="font-medium text-sm">REAL ESTATE</p>
+                <Link href="press_detail">
+                  <div>
+                    <img className="w-full" src="/Slide4.png" />
+                    <div className="flex justify-between mt-3">
+                      <p className="font-light text-sm">29 May, 2024</p>
+                      <p className="font-medium text-sm">REAL ESTATE</p>
+                    </div>
+                    <p className="text-lg font-medium text-black my-4 mb-3">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor..
+                    </p>
+                    <a
+                      className="font-medium text-lg !text-themeDarkBeige animate flex gap-3 items-center"
+                      href="#."
+                    >
+                      Read more <FaArrowRight />
+                    </a>
                   </div>
-                  <p className="text-lg font-medium text-black my-4 mb-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor..
-                  </p>
-                  <a
-                    className="font-medium text-lg !text-themeDarkBeige animate flex gap-3 items-center"
-                    href="#."
-                  >
-                    Read more <FaArrowRight />
-                  </a>
-                </div>
+                </Link>
               </SwiperSlide>
               <SwiperSlide>
-                <div>
-                  <img className="w-full" src="/Slide1.png" />
-                  <div className="flex justify-between mt-3">
-                    <p className="font-light text-sm">29 May, 2024</p>
-                    <p className="font-medium text-sm">REAL ESTATE</p>
+                <Link href="press_detail">
+                  <div>
+                    <img className="w-full" src="/Slide1.png" />
+                    <div className="flex justify-between mt-3">
+                      <p className="font-light text-sm">29 May, 2024</p>
+                      <p className="font-medium text-sm">REAL ESTATE</p>
+                    </div>
+                    <p className="text-lg font-medium text-black my-4 mb-3">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor..
+                    </p>
+                    <a
+                      className="font-medium text-lg !text-themeDarkBeige animate flex gap-3 items-center"
+                      href="#."
+                    >
+                      Read more <FaArrowRight />
+                    </a>
                   </div>
-                  <p className="text-lg font-medium text-black my-4 mb-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor..
-                  </p>
-                  <a
-                    className="font-medium text-lg !text-themeDarkBeige animate flex gap-3 items-center"
-                    href="#."
-                  >
-                    Read more <FaArrowRight />
-                  </a>
-                </div>
+                </Link>
               </SwiperSlide>
               <SwiperSlide>
-                <div>
-                  <img className="w-full" src="/Slide2.png" />
-                  <div className="flex justify-between mt-3">
-                    <p className="font-light text-sm">29 May, 2024</p>
-                    <p className="font-medium text-sm">REAL ESTATE</p>
+                <Link href="/press_detail">
+                  <div>
+                    <img className="w-full" src="/Slide2.png" />
+                    <div className="flex justify-between mt-3">
+                      <p className="font-light text-sm">29 May, 2024</p>
+                      <p className="font-medium text-sm">REAL ESTATE</p>
+                    </div>
+                    <p className="text-lg font-medium text-black my-4 mb-3">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor..
+                    </p>
+                    <a
+                      className="font-medium text-lg !text-themeDarkBeige animate flex gap-3 items-center"
+                      href="#."
+                    >
+                      Read more <FaArrowRight />
+                    </a>
                   </div>
-                  <p className="text-lg font-medium text-black my-4 mb-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor..
-                  </p>
-                  <a
-                    className="font-medium text-lg !text-themeDarkBeige animate flex gap-3 items-center"
-                    href="#."
-                  >
-                    Read more <FaArrowRight />
-                  </a>
-                </div>
+                </Link>
               </SwiperSlide>
             </Swiper>
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };
