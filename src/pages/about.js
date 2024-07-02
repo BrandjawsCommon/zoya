@@ -7,7 +7,7 @@ const About = () => {
     return (
         <>
 
-            {/* Banner Section */}
+        
 
             <section className="w-full h-[70vh] Banner relative">
                 <video
