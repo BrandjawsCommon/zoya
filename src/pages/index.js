@@ -9,6 +9,8 @@ import Link from "next/link";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const Index = () => {
   return (
@@ -19,6 +21,8 @@ const Index = () => {
       </Head>
 
       {/* Banner Section */}
+    <Header />
+
       <section className="w-full h-[80vh] lg:h-screen Banner relative">
         <video
           src="/Banner.mp4"
@@ -339,6 +343,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+    <Footer />
+
     </>
   );
 };
