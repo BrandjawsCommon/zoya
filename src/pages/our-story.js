@@ -2,8 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 
 const ourStory = () => {
   return (
@@ -12,8 +12,7 @@ const ourStory = () => {
         <title>Our Story - Zoya</title>
         <link rel="icon" href="/Fav_Icon.png" />
       </Head>
-
-      <Header/>
+      <Header />
       {/* Banner Section */}
 
       <section className="w-full h-[70vh] Banner relative">
@@ -309,7 +308,7 @@ const ourStory = () => {
                   />
                   <div className="teamGradient bg-gradient-to-b from-transparent to-blue-900 w-full h-[440px] lg:h-[600px] xl:h-[390px] absolute bottom-0 Fast_animate"></div>
                 </div>
-                <div className="absolute bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] left-5 right-5 flex justify-between items-end">
+                <div className="absolute w-full bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] px-5 left-0 right-0 flex justify-between items-end">
                   <div className="">
                     <h3 className="text-[16px] xl:text-[18px] text-white leading-[19px] xl:leading-[22px] mb-[10px]">
                       FAROOQ KHAN
@@ -356,7 +355,7 @@ const ourStory = () => {
                   />
                   <div className="teamGradient bg-gradient-to-b from-transparent to-blue-900 w-full h-[440px] lg:h-[600px] xl:h-[390px] absolute bottom-0 Fast_animate"></div>
                 </div>
-                <div className="absolute bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] left-5 right-5 flex justify-between items-end">
+                <div className="absolute w-full bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] px-5 left-0 right-0 flex justify-between items-end">
                   <div className="">
                     <h3 className="text-[16px] xl:text-[18px] text-white leading-[19px] xl:leading-[22px] mb-[10px]">
                       IMTIAZ KHAN
@@ -406,7 +405,7 @@ const ourStory = () => {
                   />
                   <div className="teamGradient bg-gradient-to-b from-transparent to-blue-900 w-full h-[440px] lg:h-[600px] xl:h-[390px] absolute bottom-0 Fast_animate"></div>
                 </div>
-                <div className="absolute bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] left-5 right-5 flex justify-between items-end">
+                <div className="absolute w-full bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] px-5 left-0 right-0 flex justify-between items-end">
                   <div className="">
                     <h3 className="text-[16px] xl:text-[18px] text-white leading-[19px] xl:leading-[22px] mb-[10px]">
                       SHOAIB KHAN
@@ -544,7 +543,7 @@ const ourStory = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
