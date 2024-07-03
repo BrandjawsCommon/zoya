@@ -11,6 +11,8 @@ import Link from "next/link";
 import "swiper/css";
 import "swiper/css/pagination";
 import Head from "next/head";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const pressDetail = () => {
   return (
@@ -19,6 +21,8 @@ const pressDetail = () => {
         <title>Press Detail - Zoya</title>
         <link rel="icon" href="/Fav_Icon.png" />
       </Head>
+
+      <Header/>
       {/* Banner Section Start */}
       <section className="w-full h-[70vh] Banner relative Banner_overlay">
         <img src="/Detail_Banner.png" class="w-full h-full object-cover"></img>
@@ -284,6 +288,7 @@ const pressDetail = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 };
