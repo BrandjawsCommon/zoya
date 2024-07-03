@@ -1,9 +1,10 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { FaArrowUp } from "react-icons/fa";
 import { FaRegMessage } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -11,6 +12,39 @@ const Header = () => {
   const toggleClass = () => {
     setActive(!active);
   };
+
+  useEffect(() => {
+    if (active) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [active]);
+
+  const currentRoute = usePathname();
+
+  const [showIcon, setShowIcon] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setShowIcon(true);
+      } else {
+        setShowIcon(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
   return (
     <>
       <header className="py-5 z-20 fixed top-0 left-0 right-0 w-full bg-themeSoftPeach">
@@ -24,21 +58,42 @@ const Header = () => {
             <div className="navigation">
               <ul className="gap-6 items-center hidden md:flex">
                 <li>
-                  <Link className="!text-themeDarkBeige" href="/">
+                  <Link
+                    className={`${currentRoute === "/" ? "!text-themeDarkBeige" : ""}`}
+                    href="/"
+                  >
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about">our Story</Link>
+                  <Link
+                    className={`${currentRoute === "/our-story" ? "!text-themeDarkBeige" : ""}`}
+                    href="/our-story"
+                  >
+                    our Story
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#.">Projects</Link>
+                  <Link
+                    className={`${currentRoute === "/project-detail-page" ? "!text-themeDarkBeige" : ""}`}
+                    href="#."
+                  >
+                    Projects
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/press_release">Press Release</Link>
+                  <Link
+                    className={`${currentRoute === "/press-release" ? "!text-themeDarkBeige" : ""}`}
+                    href="#."
+                  >
+                    Press Release
+                  </Link>
                 </li>
                 <li>
-                  <Link className="Btn" href="/connect_with_us">
+                  <Link
+                    className={`Btn ${currentRoute === "/connect" ? "!text-themeDarkBeige" : ""} `}
+                    href="/connect"
+                  >
                     Connect
                   </Link>
                 </li>
@@ -58,26 +113,40 @@ const Header = () => {
                   <div className="container flex flex-col flex-wrap justify-between h-full">
                     <ul className="flex flex-wrap flex-col lg:flex-row gap-6 items-end lg:items-center">
                       <li>
-                        <Link className="!text-themeDarkBeige" href="/">
+                        <Link
+                          className={`${currentRoute === "/" ? "!text-themeDarkBeige" : ""}`}
+                          href="/"
+                        >
                           Home
                         </Link>
                       </li>
 
                       <li onClick={toggleClass}>
-                        <Link href="/about">our Story</Link>
+                        <Link
+                          href="/our-story"
+                          className={`${currentRoute === "/our-story" ? "!text-themeDarkBeige" : ""}`}
+                        >
+                          our Story
+                        </Link>
                       </li>
-                      <li
-                      onClick={toggleClass}
-                      >
-                        <Link href="#.">Projects</Link>
+                      <li onClick={toggleClass}>
+                        <Link
+                          href="#."
+                          className={`${currentRoute === "/project-detail-page" ? "!text-themeDarkBeige" : ""}`}
+                        >
+                          Projects
+                        </Link>
                       </li>
-                      <li
-                      onClick={toggleClass}
-                      >
-                        <Link href="/press_release">Press Release</Link>
+                      <li onClick={toggleClass}>
+                        <Link
+                          href="#."
+                          className={`${currentRoute === "/press-release" ? "!text-themeDarkBeige" : ""}`}
+                        >
+                          Press Release
+                        </Link>
                       </li>
-                      <li>
-                        <Link className="Btn" href="/connect_with_us">
+                      <li onClick={toggleClass}>
+                        <Link className="Btn" href="/connect">
                           Connect
                         </Link>
                       </li>
@@ -113,12 +182,13 @@ const Header = () => {
         </div>
 
         {/* Back to Up Icon */}
-
-        <div className="Icons">
-          <a className=" fixed bottom-5 right-5" href="#">
+        {showIcon && (
+        <div className="Icons fixed bottom-5 right-5">
+          <Link href="#">
             <FaArrowUp />
-          </a>
+          </Link>
         </div>
+      )}
       </div>
     </>
   );

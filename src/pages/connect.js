@@ -1,13 +1,15 @@
+import Head from "next/head";
 import React from "react";
 import { FaRegEnvelope } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
 
-const connect_with_us = () => {
+const connect = () => {
   return (
     <>
-    <Header/>
+    <Head>
+        <title>Connect - Zoya</title>
+        <link rel="icon" href="/Fav_Icon.png" />
+      </Head>
       <section className="Connect_page py-32 pb-20">
         <div className="container">
           <h1 className="uppercase text-[100px] leading-[1.3] text-themeDarkBeige font-medium">
@@ -74,9 +76,8 @@ const connect_with_us = () => {
       <div className="map_Section bg-themeLapisBlue">
         <img className="w-full h-full" src="/map.png" />
       </div>
-      <Footer/>
     </>
   );
 };
 
-export default connect_with_us;
+export default connect;

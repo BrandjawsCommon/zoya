@@ -233,6 +233,28 @@ h6 {
 
 /* About Team Section CLose */
 
+/* Project Detail page Start */
+
+.descriptionSection::after {
+  content: '';
+  background: url(/Description.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.descriptionSection::after {
+  @apply hidden lg:block
+}
+
+/* Project Detail Page Close */
+
 /* Banner Css Start */
 
 .Banner h1 span {
@@ -276,7 +298,8 @@ form textarea {
   @apply w-full;
 }
 
-form .flex input::placeholder {
+form .flex input::placeholder,
+form textarea::placeholder {
   @apply text-black opacity-30 font-raleway;
 }
 

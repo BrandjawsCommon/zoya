@@ -1,16 +1,18 @@
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 
 
-const About = () => {
+const ourStory = () => {
     return (
         <>
-
+<Head>
+        <title>Our Story - Zoya</title>
+        <link rel="icon" href="/Fav_Icon.png" />
+      </Head>
             {/* Banner Section */}
-            <Header/>
+
             <section className="w-full h-[70vh] Banner relative">
                 <video
                     src="/Banner.mp4"
@@ -42,7 +44,7 @@ const About = () => {
 
             {/* Our Philosophy Section */}
 
-            <div className="bg-[#213A6F] py-[60px] lg:py-20 xl:py-[100px]">
+            <div className="bg-[#213A6F] py-[60px] lg:py-20 xl:py-[100px]"> 
                 <div className="container">
                     <div className="flex items-center gap-4 xl:gap-[24px] mb-5 lg:mb-10 xl:mb-14">
                         <div className="w-[40px] lg:w-[60px] xl:w-20 h-[1px] bg-[#A89C6C]"></div>
@@ -124,11 +126,11 @@ const About = () => {
                                         FAROOQ KHAN
                                     </h3>
                                     <p className="text-[16px] text-[#A89C6C] lg:text-[20px] xl:text-[24px] leading-[20.18px] lg:leading-[24.19px] xl:leading-[28.18px] font-light w-full lg:w-[82%] mb-5 lg:mb-0">
-                                        Chairman and Managing Director, Columbia Group
+                                        Chairman and Managing Director, Zoya Developments
                                     </p>
                                 </div>
                                 <div className="w-full lg:w-[15%] flex justify-start md:justify-end">
-                                    <Link href="#." className="bg-[#A89C6C] w-[30px] h-[30px] lg:w-[42px] lg:h-[42px] rounded-[50%] text-center px-2 py-[7px] lg:px-[12px] lg:py-[11px] block hover:bg-[#213A6F] transition-all">
+                                    <Link href="https://www.linkedin.com/in/farooq-khan-124085108/" target="_blank" className="bg-[#A89C6C] w-[30px] h-[30px] lg:w-[42px] lg:h-[42px] rounded-[50%] text-center px-2 py-[7px] lg:px-[12px] lg:py-[11px] block hover:bg-[#213A6F] transition-all">
                                         <img src="/Linkedin.svg" className="" />
                                     </Link>
                                 </div>
@@ -244,8 +246,7 @@ const About = () => {
                                             FAROOQ KHAN
                                         </h3>
                                         <p className="text-[14px] lg:text-[16px] leading-normal font-light text-[#A89C6C]">
-                                            Chairman and Managing Director,
-                                            Columbia Group
+                                         Chairman & Managing Director Zoya Developments
                                         </p>
                                     </div>
                                     <div className="">
@@ -295,8 +296,7 @@ const About = () => {
                                             IMTIAZ KHAN
                                         </h3>
                                         <p className="text-[14px] lg:text-[16px] leading-normal font-light text-[#A89C6C]">
-                                            Executive Director,
-                                            Columbia Group
+                                        Founder & Managing Director Zoya Developments
                                         </p>
                                     </div>
                                     <div className="">
@@ -346,8 +346,7 @@ const About = () => {
                                             SHOAIB KHAN
                                         </h3>
                                         <p className="text-[14px] lg:text-[16px] leading-normal font-light text-[#A89C6C]">
-                                            Executive Director,
-                                            Columbia Group
+                                        CEO Zoya Developments
                                         </p>
                                     </div>
                                     <div className="">
@@ -466,9 +465,9 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
+
         </>
     )
 }
 
-export default About;
+export default ourStory;

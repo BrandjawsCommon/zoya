@@ -10,18 +10,15 @@ import Link from "next/link";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 
 const Index = () => {
   return (
     <>
       <Head>
         <title>Home - Zoya</title>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/Fav_Icon.png" />
       </Head>
-      
-      <Header/>
+
       {/* Banner Section */}
       <section className="w-full h-[80vh] lg:h-screen Banner relative">
         <video
@@ -167,7 +164,7 @@ const Index = () => {
       </section>
 
       {/* Spotlight Section Start */}
-      <section className="py-20 spotlightSection bg-white">
+      {/* <section className="py-20 spotlightSection bg-white">
         <div className="container">
           <div className="w-full flex flex-wrap gap-6 md:gap-0 justify-between items-center mb-20 md:mb-20 z-10 relative">
             <h4 className=" text-black font-medium">
@@ -318,7 +315,7 @@ const Index = () => {
             </Swiper>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Regirster Section Start */}
       <section className="py-20">
@@ -353,7 +350,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <Footer/>
     </>
   );
 };
