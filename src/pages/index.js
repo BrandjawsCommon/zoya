@@ -21,7 +21,8 @@ const Index = () => {
         <link rel="icon" href="/Fav_Icon.png" />
       </Head>
 
-<Header/>
+    <Header/>
+
       {/* Banner Section */}
       <section className="w-full h-[80vh] lg:h-screen Banner relative">
         <video
@@ -35,13 +36,13 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="md:!pb-36 !pb-36 py-20 md:py-28 relative">
+      <section className="lg:!pb-36 py-[60px] pb-[200px] lg:py-28 relative">
         <div className="container">
           <h6 className="text-themeDarkBeige subHeading uppercase mb-14">
             About
           </h6>
           <div className="flex items-start flex-wrap">
-            <div className="w-full md:w-[60%]">
+            <div className="w-full lg:w-[60%]">
               <p className="paragraph font-light text-black">
                 We believe real estate is all about people. From cozy homes to
                 mega communities, its founded on human needs, aspirations and
@@ -49,17 +50,17 @@ const Index = () => {
                 connections, where each project becomes a medium for human
                 expression, inspiration and creativity.
               </p>
-              <h4 className="mt-12 mb-14">
+              <h4 className="text-[20px] lg:text-[30px] xl:text-[35px] leading-[26.96px] lg:leading-[36.96px] xl:leading-[41.96px] my-5 lg:my-10 xl:mt-12 xl:mb-14">
                 Welcome to{" "}
                 <span className="text-themeDarkBeige">Zoya Developments,</span>{" "}
                 Where people always come first and Where every experience
                 contributes to a lasting legacy.
               </h4>
-              <a className="Btn" href="#.">
+              <Link className="Btn" href="#.">
                 Explore
-              </a>
+              </Link>
             </div>
-            <div className="w-full md:w-[40%] pt-14 md:pt-0 pl-0 md:pl-24">
+            <div className="w-full lg:w-[40%] pt-14 md:pt-0 pl-0 lg:pl-10 xl::pl-24">
               <div className="flex flex-wrap justify-between py-4 items-baseline border-b-2 border-themeDarkBeige">
                 <h3 className="text-themeDarkBeige">
                   14 <span className="text-[24px] leading-[1.2]">Years</span>
@@ -88,8 +89,8 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="absolute about_img w-[380px] md:w-[450px] lg:w-[800px] !right-[20px] md:right-10 bottom-0">
-          <img className="w-full" src="/White_logo.png" />
+        <div className="absolute about_img w-[380px] md:w-[450px] lg:w-[800px] left-0 mx-auto right-0 lg:left-auto lg:right-10 bottom-0">
+          <img className="w-full max-w-[100%] md:max-w-[90%] lg:max-w-[65%] xl:max-w-[520px] mx-auto" src="/White_logo.png" />
         </div>
       </section>
 

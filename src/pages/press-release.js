@@ -7,8 +7,6 @@ import { FaArrowRight } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/pagination";
 import Head from "next/head";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 
 const pressRelease = () => {
   return (
@@ -18,7 +16,7 @@ const pressRelease = () => {
         <link rel="icon" href="/Fav_Icon.png" />
       </Head>
       {/* Banner Section */}
-      <Header/>
+
       <section className="w-full h-[70vh] Banner relative Banner_overlay">
         <video
           src="/Press_Banner.mp4"
@@ -180,7 +178,6 @@ const pressRelease = () => {
           </div>
         </div>
       </section>
-      <Footer/>
     </>
   );
 };

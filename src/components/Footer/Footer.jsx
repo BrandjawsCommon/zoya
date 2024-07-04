@@ -3,6 +3,12 @@ import { FaFacebookF } from "react-icons/fa6";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import { FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
+import { IoMailOutline } from "react-icons/io5";
+import { MdOutlineLocalPhone } from "react-icons/md";
+import { IoLocationOutline } from "react-icons/io5";
+
+
+
 
 const Footer = () => {
   return (
@@ -56,31 +62,37 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="footer_Block w-[26%]">
-            <p className="text-white font-medium text-xl">
-              If you’d like to talk,
-            </p>
-            <p className="text-white font-medium text-xl break-words">
-              email us at{" "}
-              <Link
-                className="hover:text-themeDarkBeige Fast_animate"
-                href="Info@zoyadevelopments.ae"
-              >
-                Info@zoyadevelopments.ae
+          <div className="footer_Block w-[26%] flex flex-col gap-[10px] md:gap-[14px] pr-16">
+            <p className="text-white font-medium text-xl flex items-start gap-2">
+            <span>
+            <IoMailOutline />
+            </span>
+
+              <Link className="hover:text-themeDarkBeige Fast_animate mt-[-4px]" href="mailto:Info@zoyadevelopments.ae" target="_blank">
+              Info@zoyadevelopments.ae
+
               </Link>
             </p>
-            <p className="text-white font-medium text-xl">
-              {" "}
-              or calls on{" "}
+            <p className="text-white font-medium text-xl flex items-center gap-2">
+            <span>
+            <MdOutlineLocalPhone />
+            </span> 
               <Link
                 className="hover:text-themeDarkBeige Fast_animate"
                 href="tel:+97145534816"
               >
                 +97145534816
               </Link>
-              <br />
-              Address : P02, P03, Building 3, Bay Square, Business Bay, Dubai,
-              United Arab Emirates.
+            </p>
+            <p className="text-white font-medium text-xl flex items-start gap-2">
+            <span>
+            <IoLocationOutline />
+            </span>
+
+              <Link className="hover:text-themeDarkBeige Fast_animate mt-0 md:mt-[-4px]" href="https://maps.app.goo.gl/5Uf6FGqw1jzFDe7u8?g_st=iw" target="_blank">
+                P02, P03, Building 3, Bay Square, Business Bay, Dubai, United
+                Arab Emirates.
+              </Link>
             </p>
           </div>
           <div className="footer_Block Newsletter w-[35%]">

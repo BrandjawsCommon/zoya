@@ -12,6 +12,7 @@ const ourStory = () => {
         <title>Our Story - Zoya</title>
         <link rel="icon" href="/Fav_Icon.png" />
       </Head>
+
       <Header />
       {/* Banner Section */}
 
@@ -125,9 +126,9 @@ const ourStory = () => {
 
       {/* Farooq Khan Section */}
 
-      <div className="py-[60px] lg:py-20 xl:py-[100px]">
-        <div className="container">
-          <div className="flex items-center flex-col lg:flex-row gap-0 lg:gap-[10px] xl:gap-[50px]">
+      <div className="py-[60px] lg:py-20 xl:py-[100px] h-max xl:h-screen">
+        <div className="container h-full">
+          <div className="flex items-center flex-col lg:flex-row gap-0 lg:gap-[10px] xl:gap-[50px] h-full ">
             <div className="w-full lg:w-[70%]">
               <div className="flex items-center gap-4 xl:gap-[24px] mb-5 lg:mb-10 xl:mb-[80px]">
                 <div className="w-[40px] lg:w-[60px] xl:w-20 h-[1px] bg-[#A89C6C]"></div>
@@ -170,10 +171,10 @@ const ourStory = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-[30%]">
+            <div className="w-full lg:w-[30%] h-[100%]">
               <img
                 src="/Farooq-Khan.jpg"
-                className="w-full md:w-[60%] lg:w-full mx-auto my-0 h-full"
+                className="w-full md:w-[60%] lg:w-full mx-auto my-0 object-cover h-full md:h-[400px]"
               />
             </div>
           </div>
@@ -308,8 +309,8 @@ const ourStory = () => {
                   />
                   <div className="teamGradient bg-gradient-to-b from-transparent to-blue-900 w-full h-[440px] lg:h-[600px] xl:h-[390px] absolute bottom-0 Fast_animate"></div>
                 </div>
-                <div className="absolute w-full bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] px-5 left-0 right-0 flex justify-between items-end">
-                  <div className="">
+                <div className="relative md:absolute !w-full mt-[-120px] mb-[40px] md:mb-0 md:mt-0 md:top-0 bottom-0 md:bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] px-5 left-0 right-0 flex justify-center md:justify-between items-end">
+                  <div className="w-[70%] ">
                     <h3 className="text-[16px] xl:text-[18px] text-white leading-[19px] xl:leading-[22px] mb-[10px]">
                       FAROOQ KHAN
                     </h3>
@@ -317,7 +318,7 @@ const ourStory = () => {
                       Chairman & Managing Director Zoya Developments
                     </p>
                   </div>
-                  <div className="">
+                  <div className="w-[30%] flex justify-end">
                     <div className="bg-[#A89C6C] w-[30px] h-[30px] rounded-[50%] text-center px-2 py-[7px] ">
                       <img src="/Linkedin.svg" className="w-full" />
                     </div>
@@ -355,8 +356,8 @@ const ourStory = () => {
                   />
                   <div className="teamGradient bg-gradient-to-b from-transparent to-blue-900 w-full h-[440px] lg:h-[600px] xl:h-[390px] absolute bottom-0 Fast_animate"></div>
                 </div>
-                <div className="absolute w-full bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] px-5 left-0 right-0 flex justify-between items-end">
-                  <div className="">
+                <div className="relative md:absolute !w-full mt-[-120px] mb-[40px] md:mb-0 md:mt-0 md:top-0 bottom-0 md:bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] px-5 left-0 right-0 flex justify-center md:justify-between items-end">
+                  <div className="w-[70%] ">
                     <h3 className="text-[16px] xl:text-[18px] text-white leading-[19px] xl:leading-[22px] mb-[10px]">
                       IMTIAZ KHAN
                     </h3>
@@ -364,7 +365,7 @@ const ourStory = () => {
                       Founder & Managing Director Zoya Developments
                     </p>
                   </div>
-                  <div className="">
+                  <div className="w-[30%] flex justify-end">
                     <div className="bg-[#A89C6C] w-[30px] h-[30px] rounded-[50%] text-center px-2 py-[7px] ">
                       <img src="/Linkedin.svg" className="w-full" />
                     </div>
@@ -405,8 +406,8 @@ const ourStory = () => {
                   />
                   <div className="teamGradient bg-gradient-to-b from-transparent to-blue-900 w-full h-[440px] lg:h-[600px] xl:h-[390px] absolute bottom-0 Fast_animate"></div>
                 </div>
-                <div className="absolute w-full bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] px-5 left-0 right-0 flex justify-between items-end">
-                  <div className="">
+                <div className="relative md:absolute !w-full mt-[-100px] mb-[50px] md:mb-0 md:mt-0 md:top-0 bottom-0 md:bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] px-5 left-0 right-0 flex justify-center md:justify-between items-end">
+                  <div className="w-[70%] ">
                     <h3 className="text-[16px] xl:text-[18px] text-white leading-[19px] xl:leading-[22px] mb-[10px]">
                       SHOAIB KHAN
                     </h3>
@@ -414,7 +415,7 @@ const ourStory = () => {
                       CEO Zoya Developments
                     </p>
                   </div>
-                  <div className="">
+                  <div className="w-[30%] flex justify-end">
                     <div className="bg-[#A89C6C] w-[30px] h-[30px] rounded-[50%] text-center px-2 py-[7px] ">
                       <img src="/Linkedin.svg" className="w-full" />
                     </div>

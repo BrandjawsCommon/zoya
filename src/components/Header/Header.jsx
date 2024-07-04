@@ -37,13 +37,12 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   return (
     <>
@@ -52,7 +51,7 @@ const Header = () => {
           <div className="flex justify-between items-center">
             <div className="logo">
               <Link href="/">
-                <img className="w-32" src="/Zoya_Logo.png" alt="Logo" />
+                <img className="w-full max-w-[133px]" src="/Zoya_Logo.png" alt="Logo" />
               </Link>
             </div>
             <div className="navigation">
@@ -182,13 +181,18 @@ const Header = () => {
         </div>
 
         {/* Back to Up Icon */}
-        {showIcon && (
-        <div className="Icons fixed bottom-5 right-5">
-          <Link href="#">
+        {/* {showIcon && (
+          <div className="Icons fixed bottom-5 right-5">
+            <Link className="!bg-transparent" href="#">
+              <FaArrowUp />
+            </Link>
+          </div>
+        )} */}
+        <div className="Icons w-[50px] h-[50px] md:w-auto md:h-auto fixed bottom-5 right-5 bg-transparent">
+          <Link href="#" className="">
             <FaArrowUp />
           </Link>
         </div>
-      )}
       </div>
     </>
   );
