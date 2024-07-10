@@ -2,8 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
 
 const ourStory = () => {
   return (
@@ -11,9 +9,21 @@ const ourStory = () => {
       <Head>
         <title>Our Story - Zoya</title>
         <link rel="icon" href="/Fav_Icon.png" />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16635261680"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-16635261680');
+            `,
+          }}
+        />
       </Head>
-
-      <Header />
       {/* Banner Section */}
 
       <section className="w-full h-[70vh] Banner relative">
@@ -111,7 +121,7 @@ const ourStory = () => {
             </div>
             <div className="w-full md:w-1/2">
               <h2 className="text-[35px] lg:text-[40px] xl:text-[60px] text-[#A89C6C] leading-normal mb-0 lg:mb-[10px]">
-                100,000{" "}
+                1,000,000{" "}
                 <span className="text-[16px] lg:text-[20px] xl:text-[28px] leading-normal">
                   Sq.ft
                 </span>
@@ -544,7 +554,6 @@ const ourStory = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

@@ -10,8 +10,7 @@ import Link from "next/link";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+import ContactForm from "../components/ContactForm/ContactForm";
 
 const Index = () => {
   return (
@@ -19,9 +18,21 @@ const Index = () => {
       <Head>
         <title>Home - Zoya</title>
         <link rel="icon" href="/Fav_Icon.png" />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16635261680"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-16635261680');
+            `,
+          }}
+        />
       </Head>
-
-    <Header/>
 
       {/* Banner Section */}
       <section className="w-full h-[80vh] lg:h-screen Banner relative">
@@ -79,7 +90,7 @@ const Index = () => {
               </div>
               <div className="flex flex-wrap justify-between py-4 items-baseline border-b-2 border-themeDarkBeige">
                 <h3 className="text-themeDarkBeige">
-                  100,000{" "}
+                  1,000,000{" "}
                   <span className="text-[24px] leading-[1.2]">Sq.ft</span>
                 </h3>
                 <p className="text-lg font-raleway text-black font-light">
@@ -90,7 +101,10 @@ const Index = () => {
           </div>
         </div>
         <div className="absolute about_img w-[380px] md:w-[450px] lg:w-[800px] left-0 mx-auto right-0 lg:left-auto lg:right-10 bottom-0">
-          <img className="w-full max-w-[100%] md:max-w-[90%] lg:max-w-[65%] xl:max-w-[520px] mx-auto" src="/White_logo.png" />
+          <img
+            className="w-full max-w-[100%] md:max-w-[90%] lg:max-w-[65%] xl:max-w-[520px] mx-auto"
+            src="/White_logo.png"
+          />
         </div>
       </section>
 
@@ -162,7 +176,6 @@ const Index = () => {
                 Coming Soon
               </h2>
             </div>
-
           </div>
         </div>
       </section>
@@ -338,7 +351,7 @@ const Index = () => {
               </div>
             </div>
             <div className="w-full md:w-[55%]">
-              <form>
+              {/* <form>
                 <div className="flex justify-between flex-wrap">
                   <input type="text" name="" placeholder="First Name" />
                   <input type="text" name="" placeholder="Last Name" />
@@ -347,14 +360,17 @@ const Index = () => {
                   <input type="email" name="" placeholder="Email Address" />
                   <input type="text" name="" placeholder="Company name" />
                 </div>
-                <textarea className="w-full min-h-44 mb-8" placeholder="Type you enquiries here.." />
+                <textarea
+                  className="w-full min-h-44 mb-8"
+                  placeholder="Type you enquiries here.."
+                />
                 <button className="transparentBtn">Send</button>
-              </form>
+              </form> */}
+              <ContactForm />
             </div>
           </div>
         </div>
       </section>
-      <Footer/>
     </>
   );
 };

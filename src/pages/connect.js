@@ -3,8 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { FaRegEnvelope } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+import ContactForm from "../components/ContactForm/ContactForm";
 
 const connect = () => {
   return (
@@ -12,8 +11,21 @@ const connect = () => {
       <Head>
         <title>Connect - Zoya</title>
         <link rel="icon" href="/Fav_Icon.png" />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16635261680"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-16635261680');
+            `,
+          }}
+        />
       </Head>
-      <Header/>
       <section className="Connect_page py-32 pb-20">
         <div className="container">
           <h1 className="uppercase !text-[40px] lg:!text-[60px] xl:text-[100px] leading-[1.3] text-themeDarkBeige font-medium">
@@ -78,7 +90,7 @@ const connect = () => {
               </div>
             </div>
             <div className="Inner_Section w-[60%] pl-0 md:pl-10 lg:pl-20 xl:pl-36">
-              <form>
+              {/* <form>
                 <div className="flex justify-between flex-wrap">
                   <input type="text" name="" placeholder="First Name" />
                   <input type="text" name="" placeholder="Last Name" />
@@ -92,18 +104,16 @@ const connect = () => {
                   placeholder="Type you enquiries here.."
                 />
                 <button className="transparentBtn">Send</button>
-              </form>
+              </form> */}
+              <ContactForm/>
             </div>
           </div>
         </div>
       </section>
       <div className="map_Section bg-themeLapisBlue">
       <iframe className="w-full h-[400px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.5192163473293!2d55.279624899999995!3d25.185706999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f683045cdac7f%3A0x3e7ab93219dae54b!2sBay%20Square%20Building%203!5e0!3m2!1sen!2s!4v1720014075787!5m2!1sen!2s"   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        {/* <img className="w-full h-full" src="/map.png" /> */}
       </div>
-      <Footer/>
     </>
-
   );
 };
 

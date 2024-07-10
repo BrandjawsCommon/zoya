@@ -72,7 +72,7 @@ const Header = () => {
                     our Story
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     className={`${currentRoute === "/project-detail-page" ? "!text-themeDarkBeige" : ""}`}
                     href="#."
@@ -87,7 +87,7 @@ const Header = () => {
                   >
                     Press Release
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     className={`Btn ${currentRoute === "/connect" ? "!text-themeDarkBeige" : ""} `}
@@ -107,7 +107,7 @@ const Header = () => {
                 </button>
 
                 <div
-                  className={`Main-Menu h-screen w-full bg-themeSoftPeach fixed -z-[2] left-0 right-0 animate ${active ? "bottom-0" : "-bottom-full"}`}
+                  className={`Main-Menu h-screen w-full bg-themeSoftPeach fixed -z-[2] left-0 right-0 animate ${active ? "bottom-0" : "-bottom-[200%]"}`}
                 >
                   <div className="container flex flex-col flex-wrap justify-between h-full">
                     <ul className="flex flex-wrap flex-col lg:flex-row gap-6 items-end lg:items-center">
@@ -128,7 +128,7 @@ const Header = () => {
                           our Story
                         </Link>
                       </li>
-                      <li onClick={toggleClass}>
+                      {/* <li onClick={toggleClass}>
                         <Link
                           href="#."
                           className={`${currentRoute === "/project-detail-page" ? "!text-themeDarkBeige" : ""}`}
@@ -143,7 +143,7 @@ const Header = () => {
                         >
                           Press Release
                         </Link>
-                      </li>
+                      </li> */}
                       <li onClick={toggleClass}>
                         <Link className="Btn" href="/connect">
                           Connect
