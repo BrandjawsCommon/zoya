@@ -139,7 +139,7 @@ const ourStory = () => {
 
       {/* Farooq Khan Section */}
 
-      <div className="py-[60px] lg:py-20 xl:py-[100px] h-max xl:h-screen">
+      <div className="py-[60px] lg:py-20 xl:py-[100px] h-max">
         <div className="container h-full">
           <div className="flex items-center flex-col lg:flex-row gap-0 lg:gap-[10px] xl:gap-[50px] h-full ">
             <div className="w-full lg:w-[70%]">
