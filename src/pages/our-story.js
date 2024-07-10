@@ -2,6 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const ourStory = () => {
   return (
@@ -24,6 +26,7 @@ const ourStory = () => {
           }}
         />
       </Head>
+      <Header/>
       {/* Banner Section */}
 
       <section className="w-full h-[70vh] Banner relative">
@@ -554,6 +557,7 @@ const ourStory = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

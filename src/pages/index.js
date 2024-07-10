@@ -11,6 +11,8 @@ import Link from "next/link";
 import "swiper/css";
 import "swiper/css/pagination";
 import ContactForm from "../components/ContactForm/ContactForm";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const Index = () => {
   return (
@@ -33,6 +35,7 @@ const Index = () => {
           }}
         />
       </Head>
+      <Header/>
 
       {/* Banner Section */}
       <section className="w-full h-[80vh] lg:h-screen Banner relative">
@@ -371,6 +374,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 };

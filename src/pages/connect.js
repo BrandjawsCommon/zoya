@@ -4,6 +4,8 @@ import React from "react";
 import { FaRegEnvelope } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import ContactForm from "../components/ContactForm/ContactForm";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const connect = () => {
   return (
@@ -26,6 +28,7 @@ const connect = () => {
           }}
         />
       </Head>
+      <Header/>
       <section className="Connect_page py-32 pb-20">
         <div className="container">
           <h1 className="uppercase !text-[40px] lg:!text-[60px] xl:text-[100px] leading-[1.3] text-themeDarkBeige font-medium">
@@ -113,6 +116,7 @@ const connect = () => {
       <div className="map_Section bg-themeLapisBlue">
       <iframe className="w-full h-[400px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.5192163473293!2d55.279624899999995!3d25.185706999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f683045cdac7f%3A0x3e7ab93219dae54b!2sBay%20Square%20Building%203!5e0!3m2!1sen!2s!4v1720014075787!5m2!1sen!2s"   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+      <Footer/>
     </>
   );
 };
