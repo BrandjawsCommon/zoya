@@ -93,7 +93,7 @@ const Index = () => {
               </div>
               <div className="flex flex-wrap justify-between py-4 items-baseline border-b-2 border-themeDarkBeige">
                 <h3 className="text-themeDarkBeige">
-                  1,000,000{" "}
+                  2,000,000{" "}
                   <span className="text-[24px] leading-[1.2]">Sq.ft</span>
                 </h3>
                 <p className="text-lg font-raleway text-black font-light">
