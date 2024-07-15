@@ -124,7 +124,7 @@ const ourStory = () => {
             </div>
             <div className="w-full md:w-1/2">
               <h2 className="text-[35px] lg:text-[40px] xl:text-[60px] text-[#A89C6C] leading-normal mb-0 lg:mb-[10px]">
-                1,000,000{" "}
+                2,000,000{" "}
                 <span className="text-[16px] lg:text-[20px] xl:text-[28px] leading-normal">
                   Sq.ft
                 </span>
