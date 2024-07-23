@@ -80,27 +80,27 @@ html {
 }
 
 h1 {
-  @apply text-[80px] leading-[1.2];
+  @apply text-[76px] leading-[1.2];
 }
 
 h2 {
-  @apply text-[60px] leading-[1.2];
+  @apply text-[56px] leading-[1.2];
 }
 
 h3 {
-  @apply text-[50px] leading-[1.2] font-medium;
+  @apply text-[46px] leading-[1.2] font-medium;
 }
 
 h4 {
-  @apply text-[44px] leading-[1.2] font-medium;
+  @apply text-[40px] leading-[1.2] font-medium;
 }
 
 h5 {
-  @apply text-[28px] leading-[1.2];
+  @apply text-[26px] leading-[1.2];
 }
 
 h6 {
-  @apply text-[24px] leading-[1.2];
+  @apply text-[22px] leading-[1.2];
 }
 
 .Icons a {
@@ -109,6 +109,10 @@ h6 {
 
 .breadcrumbs {
   @apply text-xl text-white;
+}
+
+.sperator {
+  @apply w-[300px] h-[2px] bg-themeDarkBeige;
 }
 
 /* Reset Css End Here */
@@ -289,6 +293,24 @@ h6 {
 .Banner_overlay::before {
   content: "";
   @apply absolute h-full w-full bg-black opacity-35 left-0 right-0 top-0 bottom-0 z-[2];
+}
+
+.Custom_Slider .swiper-wrapper {
+  @apply pb-14;
+}
+
+.Custom_Slider .swiper-pagination .swiper-pagination-bullet {
+  @apply !m-0 w-full rounded-none;
+}
+
+.Custom_Slider
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply bg-black;
+}
+
+.Custom_Slider .swiper-pagination {
+  @apply flex flex-nowrap;
 }
 
 /* Banner Css Close */

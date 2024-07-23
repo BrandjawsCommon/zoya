@@ -5,6 +5,12 @@ import { FaArrowRight } from "react-icons/fa6";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
 const ourStory = () => {
   return (
     <>
@@ -26,37 +32,39 @@ const ourStory = () => {
           }}
         />
       </Head>
-      <Header/>
+      <Header />
       {/* Banner Section */}
 
-      <section className="w-full h-[70vh] Banner relative">
+      <section className="w-full h-[70vh] Banner relative Banner_overlay">
         <video
-          src="/Banner.mp4"
+          src="/Zoya-About.mp4"
           autoPlay="true"
           playsinline="true"
           loop="true"
           muted="true"
           class="w-full h-full object-cover"
         ></video>
-        <div className="container">
+        {/* <div className="container">
           <h1 className="text-[60px] lg:text-[80px] xl:text-[120px] text-white absolute bottom-10 xl:bottom-20 px-0 md:px-4 uppercase font-medium">
             Our Story
           </h1>
-        </div>
+        </div> */}
       </section>
 
       {/* About Content Section */}
 
       <div className="py-[60px] xl:py-20 xl:pb-[100px]">
         <div className="container">
-          <p className="text-[20px] lg:text-[30px] xl:text-[35px] leading-[26.96px] lg:leading-[36.96px] xl:leading-[41.96px] w-full xl:w-[95%] font-medium">
+          <h1 className="text-black uppercase font-medium mb-6">Our Story</h1>
+          <p className="text-[20px] md:text-[32px] leading-[1.3] w-full xl:w-[95%] font-medium">
             <span className="text-[#A89C6C]">Zoya Developments </span>began its
             journey driven by a vision of developing modern spaces that merge
             craftsmanship and liveability. In the last 14 years, we have set new
             standards in creating unparalleled living spaces and delivering
             exceptional value for our customers.
           </p>
-          <p className="text-[16px] lg:text-[20px] xl:text-[24px] leading-[20.18px] lg:leading-[24.19px] xl:leading-[28.18px] font-light w-full lg:w-[82%] mt-5 lg:mt-10 xl:mt-14">
+          <div className="sperator  my-14"></div>
+          <p className="text-[16px] lg:text-[20px] xl:text-[24px] leading-[20.18px] lg:leading-[24.19px] xl:leading-[28.18px] font-light w-full lg:w-[82%]">
             In 2024, we mark our entry into Dubai. We are excited to bring our
             legacy of excellence and innovation to this vibrant ecosystem of
             growth and prosperity. Dubai’s visionary leadership and
@@ -213,12 +221,12 @@ const ourStory = () => {
                 src="/Elevated-Design.svg"
                 className="w-[50px] lg:w-[60px] mb-5 lg:mb-10"
               />
-              <h2 className="text-[30px] xl:text-[35px] text-white leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
+              <h2 className="text-[30px] xl:text-[32px] text-white leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
                 Elevated
                 <br />
                 Design
               </h2>
-              <p className="text-[16px] lg:text-[18px] leading-[21px] lg:leading-[23px] font-light text-white">
+              <p className="text-[16px] leading-[1.5] font-light text-white">
                 We collaborate with leading architects and designers to craft
                 spaces that are visually stunning as well as optimized for
                 functionality. We go beyond trends to create designs that
@@ -230,12 +238,12 @@ const ourStory = () => {
                 src="/Bulb.svg"
                 className="w-[50px] lg:w-[60px] mb-5 lg:mb-10"
               />
-              <h2 className="text-[30px] xl:text-[35px] text-white leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
+              <h2 className="text-[30px] xl:text-[32px] text-white leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
                 Effortlessly
                 <br />
                 Smart
               </h2>
-              <p className="text-[16px] lg:text-[18px] leading-[21px] lg:leading-[23px] font-light text-white">
+              <p className="text-[16px] leading-[1.5] font-light text-white">
                 We believe technology should enhance your life. We seamlessly
                 integrate cutting-edge technologies into our developments,
                 creating smart homes that personalize your environment and
@@ -247,12 +255,12 @@ const ourStory = () => {
                 src="/Exceptional-Investment.svg"
                 className="w-[50px] lg:w-[60px] mb-5 lg:mb-10"
               />
-              <h2 className="text-[30px] xl:text-[35px] text-white leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
+              <h2 className="text-[30px] xl:text-[32px] text-white leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
                 Exceptional
                 <br />
                 Investment
               </h2>
-              <p className="text-[16px] lg:text-[18px] leading-[21px] lg:leading-[23px] font-light text-white">
+              <p className="text-[16px] leading-[1.5] font-light text-white">
                 We create spaces that enrich your life today and become a
                 valuable asset for your future. We prioritize prime locations
                 and strong growth potential. Spacious layouts and integrated
@@ -265,12 +273,12 @@ const ourStory = () => {
                 src="/Sustainable-Development.svg"
                 className="w-[50px] lg:w-[60px] mb-5 lg:mb-10"
               />
-              <h2 className="text-[30px] xl:text-[35px] text-white leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
+              <h2 className="text-[30px] xl:text-[32px] text-white leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
                 Sustainable
                 <br />
                 Development
               </h2>
-              <p className="text-[16px] lg:text-[18px] leading-[21px] lg:leading-[23px] font-light text-white">
+              <p className="text-[16px] leading-[1.5] font-light text-white">
                 From recycling construction waste to utilizing recycled
                 construction materials, we are committed to leading by example
                 in the movement towards sustainable development.
@@ -287,7 +295,7 @@ const ourStory = () => {
           <div className="flex items-center gap-4 xl:gap-[24px] mb-6 lg:mb-10 xl:mb-14">
             <div className="w-[40px] lg:w-[60px] xl:w-20 h-[1px] bg-[#A89C6C]"></div>
             <h2 className="text-[20px] xl:text-[24px] font-normal leading-normal text-[#A89C6C]">
-              OUR APPROCH
+              MEET THE TEAM
             </h2>
           </div>
           <p className="text-[20px] text-black lg:text-[30px] xl:text-[35px] leading-[26.96px] lg:leading-[36.96px] xl:leading-[41.96px] w-full xl:w-[95%] font-medium mb-0">
@@ -299,12 +307,11 @@ const ourStory = () => {
             each with a wealth of experience and a shared commitment to
             excellence and innovation.
           </p>
-          <div className="flex items-end flex-wrap justify-between gap-[25px] xl:gap-[30px] mb-5 lg:mb-10 xl:mb-14">
-            <div className="w-full xl:w-[calc(25%-30px)] flex flex-col justify-end">
-              <h2 className="text-[30px] xl:text-[35px] text-black leading-[35px] xl:leading-[45px] font-medium mb-5 lg:mb-[30px]">
-                Our
-                <br />
-                Leadership
+          {/* items-end flex-wrap justify-between */}
+          <div className=" mb-5 lg:mb-10 xl:mb-14">
+            <div className="w-full flex flex-col justify-end mb-10">
+              <h2 className="text-[30px] xl:text-[35px] text-black leading-[35px] xl:leading-[45px] font-medium mb-4">
+                Our Leadership
               </h2>
               <p className="text-[16px] lg:text-[18px] leading-[21px] lg:leading-[23px] font-light text-black">
                 At Zoya Developments, we have a visionary leadership team at the
@@ -313,7 +320,7 @@ const ourStory = () => {
               </p>
             </div>
 
-            <div className="w-full md:w-[calc(50%-25px)] xl:w-[calc(25%-30px)]">
+            {/* <div className="w-full md:w-[calc(50%-25px)] xl:w-[calc(25%-30px)]">
               <Link href="#." className="relative teamMember Fast_animate">
                 <div className="relative">
                   <img
@@ -456,6 +463,257 @@ const ourStory = () => {
                   </div>
                 </div>
               </Link>
+            </div> */}
+            <div className="w-full">
+              <div className="relative">
+                <Swiper
+                  slidesPerView={3}
+                  spaceBetween={30}
+                  loop={false}
+                  breakpoints={{
+                    320: {
+                      slidesPerView: 1,
+                      spaceBetween: 10,
+                    },
+                    480: {
+                      slidesPerView: 2,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 3,
+                      spaceBetween: 30,
+                    },
+                  }}
+                  className="mySwiper"
+                >
+                  <SwiperSlide>
+                    <div className="w-full">
+                      <Link
+                        href="#."
+                        className="relative teamMember Fast_animate"
+                      >
+                        <div className="relative">
+                          <img
+                            src="/Farooq-Khan.jpg"
+                            className="w-full mb-5 h-[440px] lg:h-[600px] xl:h-[390px] object-cover"
+                          />
+                          <div className="teamGradient bg-gradient-to-b from-transparent to-blue-900 w-full h-[440px] lg:h-[600px] xl:h-[390px] absolute bottom-0 Fast_animate"></div>
+                        </div>
+                        <div className="relative md:absolute !w-full mt-[-120px] mb-[40px] md:mb-0 md:mt-0 md:top-0 bottom-0 md:bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] px-5 left-0 right-0 flex justify-center md:justify-between items-end">
+                          <div className="">
+                            <h3 className="text-[16px] xl:text-[18px] text-white leading-[19px] xl:leading-[22px] mb-[10px]">
+                              FAROOQ KHAN
+                            </h3>
+                            <p className="text-[14px] lg:text-[16px] leading-normal font-light text-[#A89C6C]">
+                              Chairman & Managing Director Zoya Developments
+                            </p>
+                          </div>
+                          {/* <div className="w-[30%] flex justify-end">
+                            <div className="bg-[#A89C6C] w-[30px] h-[30px] rounded-[50%] text-center px-2 py-[7px] ">
+                              <img src="/Linkedin.svg" className="w-full" />
+                            </div>
+                          </div> */}
+                        </div>
+                        <p className="text-[14px] lg:text-[16px] leading-normal font-light text-black mb-4 h-[70px] overflow-scroll scrollParagraph">
+                          Mr. Farooq, respected for his industry insights and
+                          business acumen, has led the group for over 20 years.
+                          With a unique vision and global approach, he sets high
+                          standards and is deeply involved in every project. A
+                          man of action, he embodies the “speak less, do more”
+                          philosophy and skillfully manages the group’s diverse
+                          operations. His uncanny knowledge of the 3 M’s of real
+                          estate development - man, machines and materials,
+                          makes him the operational wizard and a valuable
+                          leader.
+                        </p>
+                        <div className="flex items-center TeamButton">
+                          <div>
+                            <p className="text-[14px] lg:text-[16px] leading-normal text-[#A89C6C] font-medium">
+                              READ BIO
+                            </p>
+                          </div>
+                          <div>
+                            <FaArrowRight className="text-[#A89C6C] arrow ml-[12px] Fast_animate" />
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="w-full">
+                      <Link
+                        href="#."
+                        className="relative teamMember Fast_animate"
+                      >
+                        <div className="relative">
+                          <img
+                            src="/Imtiaz-Khan.jpg"
+                            className="w-full mb-5 h-[440px] lg:h-[600px] xl:h-[390px] object-cover"
+                          />
+                          <div className="teamGradient bg-gradient-to-b from-transparent to-blue-900 w-full h-[440px] lg:h-[600px] xl:h-[390px] absolute bottom-0 Fast_animate"></div>
+                        </div>
+                        <div className="relative md:absolute !w-full mt-[-120px] mb-[40px] md:mb-0 md:mt-0 md:top-0 bottom-0 md:bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] px-5 left-0 right-0 flex justify-center md:justify-between items-end">
+                          <div className="">
+                            <h3 className="text-[16px] xl:text-[18px] text-white leading-[19px] xl:leading-[22px] mb-[10px]">
+                              IMTIAZ KHAN
+                            </h3>
+                            <p className="text-[14px] lg:text-[16px] leading-normal font-light text-[#A89C6C]">
+                              Founder & Managing Director Zoya Developments
+                            </p>
+                          </div>
+                          {/* <div className="w-[30%] flex justify-end">
+                            <div className="bg-[#A89C6C] w-[30px] h-[30px] rounded-[50%] text-center px-2 py-[7px] ">
+                              <img src="/Linkedin.svg" className="w-full" />
+                            </div>
+                          </div> */}
+                        </div>
+                        <p className="text-[14px] lg:text-[16px] leading-normal font-light text-black mb-4 h-[70px] overflow-scroll scrollParagraph">
+                          A global citizen with a youthful perspective, Mr.
+                          Imtiaz brings a dynamic energy to Zoya Developments.
+                          His international experience fosters a fresh approach
+                          to business, evident in his innovative ideas and
+                          “can-do” attitude. A natural multi-tasker with a
+                          strategic mind, Mr. Imtiaz plays a key role in driving
+                          the company’s expansion. His passion for project
+                          planning and strategic development ensures his
+                          contributions are valuable across all facets of the
+                          business. Imtiaz has a Degree in Business
+                          Administration from Jain-CMS, India & Specialized
+                          International Marketing Program from Chartered
+                          Institute of Marketing, UK.
+                        </p>
+                        <div className="flex items-center TeamButton">
+                          <div>
+                            <p className="text-[14px] lg:text-[16px] leading-normal text-[#A89C6C] font-medium">
+                              READ BIO
+                            </p>
+                          </div>
+                          <div>
+                            <FaArrowRight className="text-[#A89C6C] arrow ml-[12px] Fast_animate" />
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="w-full">
+                      <Link
+                        href="#."
+                        className="relative teamMember Fast_animate"
+                      >
+                        <div className="relative">
+                          <img
+                            src="/Shoaib-Khan.jpg"
+                            className="w-full mb-5 h-[440px] lg:h-[600px] xl:h-[390px] object-cover"
+                          />
+                          <div className="teamGradient bg-gradient-to-b from-transparent to-blue-900 w-full h-[440px] lg:h-[600px] xl:h-[390px] absolute bottom-0 Fast_animate"></div>
+                        </div>
+                        <div className="relative md:absolute !w-full mt-[-100px] mb-[50px] md:mb-0 md:mt-0 md:top-0 bottom-0 md:bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] px-5 left-0 right-0 flex justify-center md:justify-between items-end">
+                          <div className="">
+                            <h3 className="text-[16px] xl:text-[18px] text-white leading-[19px] xl:leading-[22px] mb-[10px]">
+                              SHOAIB KHAN
+                            </h3>
+                            <p className="text-[14px] lg:text-[16px] leading-normal font-light text-[#A89C6C]">
+                              CEO Zoya Developments
+                            </p>
+                          </div>
+                          {/* <div className="w-[30%] flex justify-end">
+                            <div className="bg-[#A89C6C] w-[30px] h-[30px] rounded-[50%] text-center px-2 py-[7px] ">
+                              <img src="/Linkedin.svg" className="w-full" />
+                            </div>
+                          </div> */}
+                        </div>
+                        <p className="text-[14px] lg:text-[16px] leading-normal font-light text-black mb-4 h-[70px] overflow-scroll scrollParagraph">
+                          Mr. Shoaib Khan, future-oriented leader at Zoya
+                          Developments, champions customer focus within the real
+                          estate landscape. His financial expertise ensures
+                          sound investment decisions and his commitment to
+                          continuous learning fuels positive change. Mr. Khan’s
+                          arrival marked a shift towards prioritizing customer
+                          needs, reflecting Zoya’s dedication to evolving with
+                          the market. Shoaib has a Degree in Business
+                          Administration from the Jain-CMS & Specialized
+                          International Practical Finance Program, UK.
+                        </p>
+                        <div className="flex items-center TeamButton">
+                          <div>
+                            <p className="text-[14px] lg:text-[16px] leading-normal text-[#A89C6C] font-medium">
+                              READ BIO
+                            </p>
+                          </div>
+                          <div>
+                            <FaArrowRight className="text-[#A89C6C] arrow ml-[12px] Fast_animate" />
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="w-full">
+                      <Link
+                        href="#."
+                        className="relative teamMember Fast_animate"
+                      >
+                        <div className="relative">
+                          <img
+                            src="/Farooq-Khan.jpg"
+                            className="w-full mb-5 h-[440px] lg:h-[600px] xl:h-[390px] object-cover"
+                          />
+                          <div className="teamGradient bg-gradient-to-b from-transparent to-blue-900 w-full h-[440px] lg:h-[600px] xl:h-[390px] absolute bottom-0 Fast_animate"></div>
+                        </div>
+                        <div className="relative md:absolute !w-full mt-[-120px] mb-[40px] md:mb-0 md:mt-0 md:top-0 bottom-0 md:bottom-[25%] lg:bottom-[20%] xl:bottom-[30%] px-5 left-0 right-0 flex justify-center md:justify-between items-end">
+                          <div className="">
+                            <h3 className="text-[16px] xl:text-[18px] text-white leading-[19px] xl:leading-[22px] mb-[10px]">
+                              Zoya Khan
+                            </h3>
+                            <p className="text-[14px] lg:text-[16px] leading-normal font-light text-[#A89C6C]">
+                              Co-founder Zoya developments
+                            </p>
+                          </div>
+                          {/* <div className="w-[30%] flex justify-end">
+                            <div className="bg-[#A89C6C] w-[30px] h-[30px] rounded-[50%] text-center px-2 py-[7px] ">
+                              <img src="/Linkedin.svg" className="w-full" />
+                            </div>
+                          </div> */}
+                        </div>
+                        <p className="text-[14px] lg:text-[16px] leading-normal font-light text-black mb-4 h-[70px] overflow-scroll scrollParagraph">
+                          Zoya Khan, respected for his industry insights and
+                          business acumen, has led the group for over 20 years.
+                          With a unique vision and global approach, he sets high
+                          standards and is deeply involved in every project. A
+                          man of action, he embodies the “speak less, do more”
+                          philosophy and skillfully manages the group’s diverse
+                          operations. His uncanny knowledge of the 3 M’s of real
+                          estate development - man, machines and materials,
+                          makes him the operational wizard and a valuable
+                          leader.
+                        </p>
+                        <div className="flex items-center TeamButton">
+                          <div>
+                            <p className="text-[14px] lg:text-[16px] leading-normal text-[#A89C6C] font-medium">
+                              READ BIO
+                            </p>
+                          </div>
+                          <div>
+                            <FaArrowRight className="text-[#A89C6C] arrow ml-[12px] Fast_animate" />
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+                {/* <div className="custom-navigation-wrapper flex gap-5 static mt-5 md:mt-0 md:absolute right-0 -top-[80px]">
+                <div className="custom-prev swiper-button-prev cursor-pointer w-[60px] h-[60px] flex justify-center items-center text-white bg-black hover:bg-white hover:text-black transition-all border border-black rounded-full text-[20px]">
+                  <FaAngleLeft />
+                </div>
+                <div className="custom-next swiper-button-next cursor-pointer w-[60px] h-[60px] flex justify-center items-center text-white bg-black hover:bg-white hover:text-black transition-all border border-black rounded-full text-[20px]">
+                  <FaAngleRight />
+                </div>
+              </div> */}
+              </div>
             </div>
           </div>
         </div>
@@ -471,10 +729,10 @@ const ourStory = () => {
               CULTURE & VALUES
             </h2>
           </div>
-          <p className="text-black text-[30px] xl:text-[35px] leading-[36.96px] xl:leading-[41.96px] w-full xl:w-[95%] font-medium mb-5">
+          <p className="text-black text-[26px] xl:text-[32px] leading-[36.96px] xl:leading-[41.96px] w-full xl:w-[95%] font-medium mb-5">
             Guiding Principles that Drive Us
           </p>
-          <p className="text-[16px] lg:text-[20px] xl:text-[24px] leading-[20.18px] lg:leading-[24.19px] xl:leading-[28.18px] font-light w-full lg:w-[82%] mb-10 xl:mb-[80px]">
+          <p className="text-[16px] lg:text-[20px] xl:text-[22px] leading-[20.18px] lg:leading-[24.19px] xl:leading-[28.18px] font-light w-full lg:w-[82%] mb-10 xl:mb-[80px]">
             Our company culture is built on a strong foundation of shared
             values. These values guide our decision- making, foster
             collaboration, and inspire us to push the boundaries of what’s
@@ -482,7 +740,7 @@ const ourStory = () => {
           </p>
           <div className="flex items-start flex-wrap justify-between gap-[25px] xl:gap-[40px] mb-5 lg:mb-10 xl:mb-14">
             <div className="w-full md:w-[calc(50%-25px)] xl:w-[calc(25%-40px)]">
-              <h2 className="text-[30px] xl:text-[33px] font-medium text-black leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
+              <h2 className="text-[26px] xl:text-[30px] font-medium text-black leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
                 Innovation Beyond Imagination
               </h2>
               <p className="text-[16px] lg:text-[18px] leading-normal font-light text-black">
@@ -492,7 +750,7 @@ const ourStory = () => {
               </p>
             </div>
             <div className="w-full md:w-[calc(50%-25px)] xl:w-[calc(25%-40px)]">
-              <h2 className="text-[30px] xl:text-[33px] font-medium text-black leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
+              <h2 className="text-[26px] xl:text-[30px] font-medium text-black leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
                 Quality Beyond Compare
               </h2>
               <p className="text-[16px] lg:text-[18px] leading-normal font-light text-black">
@@ -502,7 +760,7 @@ const ourStory = () => {
               </p>
             </div>
             <div className="w-full md:w-[calc(50%-25px)] xl:w-[calc(25%-40px)]">
-              <h2 className="text-[30px] xl:text-[35px] font-medium text-black leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
+              <h2 className="text-[26px] xl:text-[30px] font-medium text-black leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
                 Collaboration Beyond Borders
               </h2>
               <p className="text-[16px] lg:text-[18px] leading-normal font-light text-black">
@@ -513,7 +771,7 @@ const ourStory = () => {
               </p>
             </div>
             <div className="w-full md:w-[calc(50%-25px)] xl:w-[calc(25%-40px)]">
-              <h2 className="text-[30px] xl:text-[35px] font-medium text-black leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
+              <h2 className="text-[26px] xl:text-[30px] font-medium text-black leading-[35px] xl:leading-[45px] mb-5 lg:mb-[30px]">
                 Customer Focus Beyond Measure
               </h2>
               <p className="text-[16px] lg:text-[18px] leading-normal font-light text-black">
@@ -557,7 +815,7 @@ const ourStory = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

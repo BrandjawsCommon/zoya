@@ -26,17 +26,17 @@ const Footer = () => {
             <div className="Icons">
               <ul className="flex flex-wrap gap-5">
                 <li>
-                  <Link href="#.">
+                  <Link href="https://www.facebook.com/zoya.developments" target="_blank">
                     <FaFacebookF />
                   </Link>
                 </li>
                 <li>
-                  <Link href="#.">
+                  <Link href="https://www.instagram.com/zoya.developments/" target="_blank">
                     <PiInstagramLogoFill />
                   </Link>
                 </li>
                 <li>
-                  <Link href="#.">
+                  <Link href="https://www.linkedin.com/company/zoya-developments/" target="_blank">
                     <FaLinkedinIn />
                   </Link>
                 </li>
