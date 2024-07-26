@@ -296,7 +296,7 @@ const Index = () => {
                 </div>
                 <div className="flex flex-wrap justify-between py-4 items-baseline w-full">
                   <h4 className="text-themeDarkBeige md:w-full">
-                    100,000{" "}
+                  2,000,000{" "}
                     <span className="text-[24px] leading-[1.2]">Sq.ft</span>
                   </h4>
                   <p className="text-base font-raleway text-black font-light mt-3">
@@ -331,7 +331,7 @@ const Index = () => {
 
       {/* Portfolio Section Start */}
       <section className="h-[100vh] md:h-screen relative flex items-center justify-center overlay">
-        <img class="w-full h-full object-cover" src="/Portfolio.png" />
+        <img class="w-full h-full object-cover" src="/Portfolio-updated.png" />
         <div className="absolute z-10 w-full bottom-[100px]">
           <div className="container">
             {/* <div className="flex flex-wrap md:flex-nowrap gap-7 md:gap-0 justify-between items-end">
