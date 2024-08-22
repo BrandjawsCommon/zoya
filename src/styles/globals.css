@@ -35,26 +35,33 @@ html {
   transition: 0.6s all ease-in-out;
 }
 
+.Menu_Animate {
+  transition: 0.5s all ease-in-out;
+}
+
 .Fast_animate {
   transition: 0.3s all ease-in-out;
 }
 
-.Btn {
-  @apply border border-themeLapisBlue rounded-[50px] font-semibold px-10 py-2 text-lg !text-white overflow-hidden animate font-raleway inline-block relative;
+.Btn,
+.RegisterMainSection .transparentBtn {
+  @apply border border-themeLapisBlue rounded-[50px] !font-normal px-10 py-2 text-lg !text-white overflow-hidden animate font-raleway inline-block relative;
 }
 
-.Btn::before {
+.Btn::before,
+.RegisterMainSection .transparentBtn::before {
   content: "";
   @apply w-full h-full bg-themeLapisBlue left-0 right-0 bottom-0 animate absolute -z-[1];
 }
 
-.Btn:hover::before {
+.Btn:hover::before,
+.RegisterMainSection .transparentBtn:hover::before {
   content: "";
   @apply -bottom-full animate;
 }
 
 .transparentBtn {
-  @apply border border-themeLapisBlue rounded-[50px] px-10 py-2 font-semibold text-lg overflow-hidden !text-themeLapisBlue bg-transparent animate font-raleway inline-block relative;
+  @apply border border-themeLapisBlue rounded-[50px] px-10 py-2 !font-normal text-lg overflow-hidden !text-themeLapisBlue bg-transparent animate font-raleway inline-block relative z-50;
 }
 
 .transparentBtn:hover {
@@ -68,39 +75,52 @@ html {
 
 .transparentBtn:hover::before {
   content: "";
-  @apply bottom-0 bg-themeLapisBlue animate;
+  @apply bottom-0 bg-themeLapisBlue animate -z-10;
 }
 
-.Btn:hover {
+.Btn:hover,
+.RegisterMainSection .transparentBtn:hover {
   @apply !text-themeLapisBlue bg-white animate;
 }
 
 .navigation ul li a {
-  @apply text-lg text-themeLapisBlue font-medium capitalize hover:text-themeDarkBeige Fast_animate;
+  @apply text-sm text-white !font-normal capitalize Fast_animate;
+}
+
+.Mobile_Menu .Main-Menu .social_icons a {
+  @apply bg-white w-8 h-8 flex justify-center items-center rounded-full;
+}
+
+.Mobile_Menu .Main-Menu .social_icons a svg {
+  @apply text-themeLapisBlue text-[15px];
+}
+
+.brgr-btn {
+  @apply !bg-themeSoftPeach border border-themeLapisBlue rounded-[15px] !font-normal px-5 py-0 text-lg overflow-hidden animate font-raleway inline-block relative
 }
 
 h1 {
-  @apply text-[76px] leading-[1.2];
+  @apply text-[64px] leading-[1.2];
 }
 
 h2 {
-  @apply text-[56px] leading-[1.2];
+  @apply text-[50px] leading-[1.2] !font-normal;
 }
 
 h3 {
-  @apply text-[46px] leading-[1.2] font-medium;
+  @apply text-[38px] leading-[1.2] !font-normal;
 }
 
 h4 {
-  @apply text-[40px] leading-[1.2] font-medium;
+  @apply text-[34px] leading-[1.2] !font-normal;
 }
 
 h5 {
-  @apply text-[26px] leading-[1.2];
+  @apply text-[20px] leading-[1.2];
 }
 
 h6 {
-  @apply text-[22px] leading-[1.2];
+  @apply text-[16px] leading-[1.2];
 }
 
 .Icons a {
@@ -118,28 +138,64 @@ h6 {
 /* Reset Css End Here */
 
 .paragraph {
-  @apply font-raleway text-[20px] leading-[1.3];
+  @apply font-raleway text-[12px] lg:text-[14px] leading-[1.3];
 }
 
 .container {
-  @apply max-w-[1280px] w-full m-auto px-4;
+  @apply max-w-[1400px] w-full m-auto px-4;
 }
 
 /* Header Css Start */
+
+.DropDownHover .properties {
+  @apply flex items-center gap-2
+}
+
+/* .DropDownHover .properties{
+@apply py-5
+} */
+
+.DropDownHover a:hover span {
+  @apply rotate-180 transition-all ease-in-out duration-500
+}
+
+.dropdown {
+  @apply bg-[#F3F0E7] invisible opacity-0 w-[300px] max-w-[230px] absolute bottom-[-90px] !z-50 px-6 py-6 -left-[60%] right-auto rounded-lg Menu_Animate;
+}
+
+.DropDownHover:hover .dropdown {
+  @apply visible Menu_Animate opacity-100;
+}
+
+.dropdown a {
+  @apply !transition-none;
+}
+
+.dropdown .angleup {
+  @apply text-[#F3F0E7] absolute top-[-20px] text-[30px] left-[100px]
+}
+
+.dropdown li {
+  @apply flex justify-between w-full items-center
+}
+
+.dropdown li svg {
+  @apply text-themeLapisBlue
+}
 
 .navigation a.Btn {
   @apply !block;
 }
 
 .Fixed_Icons a {
-  @apply bg-themeLapisBlue hover:bg-white hover:text-themeLapisBlue border hover:border-white border-themeLapisBlue;
+  @apply bg-transparent w-[40px] h-[40px] hover:bg-white hover:text-themeLapisBlue border hover:border-white border-transparent;
 }
 
 #nav-toggle {
   display: inline-block;
   position: relative;
   display: flex;
-  min-height: 46px;
+  min-height: 40px;
   justify-content: center;
 }
 
@@ -158,21 +214,24 @@ h6 {
 #nav-toggle span:after {
   cursor: pointer;
   border-radius: 1px;
-  width: 30px;
-  background: white;
+  background: #213a6f;
   position: absolute;
   display: block;
   content: "";
+  left: 25%;
+  /* transform: translateX(-50%); */
 }
 
 #nav-toggle span:before {
-  top: -2px;
+  top: 2px;
   height: 2px;
+  width: 20px;
 }
 
 #nav-toggle span:after {
-  bottom: -10px;
+  top: 14px;
   height: 2px;
+  width: 10px;
 }
 
 #nav-toggle span,
@@ -187,18 +246,165 @@ h6 {
 
 #nav-toggle.active span:before,
 #nav-toggle.active span:after {
-  top: 0;
+  top: 8px !important;
 }
 
 #nav-toggle.active span:before {
-  transform: rotate(45deg);
+  /* transform: rotate(45deg); */
 }
 
 #nav-toggle.active span:after {
-  transform: rotate(-45deg);
+  /* transform: rotate(-45deg); */
+}
+
+.Side_fixed_icons {
+  border-radius: 30px 0px 0px 30px;
+  background: #213a6f8a;
 }
 
 /* Header Css Close */
+
+/* Home Page Css Start */
+
+.portfolio_Section {
+  @apply cursor-pointer;
+}
+
+.portfolio_Section::before {
+  content: "";
+  @apply absolute h-full w-full bg-black opacity-0 left-0 right-0 top-0 bottom-0 z-[2] animate;
+}
+
+.portfolio_Section:hover::before {
+  content: "";
+  @apply opacity-55 animate;
+}
+
+.portfolio_Section .Portfolio_Image {
+  @apply bottom-0 animate;
+}
+
+.portfolio_Section:hover .Portfolio_Image {
+  @apply bottom-[110%] lg:bottom-[130%] animate;
+}
+
+.portfolio_Section .Content_Box {
+  @apply opacity-0 invisible animate;
+}
+
+.portfolio_Section:hover .Content_Box {
+  @apply opacity-100 visible animate;
+}
+
+.Home_IconBox .iconBox svg {
+  @apply text-[30px] leading-[1.3] text-themeDarkBeige font-semibold;
+}
+
+.Home_IconBox .iconBox {
+  width: calc(25% - 20px);
+}
+
+.Home_IconBox .PopUp_Box {
+  width: calc(25% - 20px);
+}
+
+.Home_IconBox button .iconBox {
+  @apply w-full;
+}
+
+.SectionPopup::before {
+  content: "";
+  @apply absolute left-0 right-0 top-0 bottom-0 w-full h-full bg-themeLapisBlue opacity-50 z-[-1];
+}
+.belowheader{
+  @apply !z-[51]
+}
+
+.SectionPopup input,
+.SectionPopup textarea {
+  @apply !border-themeDarkBeige !text-themeDarkBeige;
+}
+
+.SectionPopup input::placeholder,
+.SectionPopup textarea::placeholder {
+  @apply !text-black !opacity-40;
+}
+
+.SectionPopup .Btn {
+  @apply !text-themeLapisBlue;
+}
+
+body.no-scroll {
+  @apply !overflow-y-hidden;
+}
+
+.About_Section_Counter h4 {
+  font-size: 24px !important;
+}
+
+.About_Section_Counter h4 span {
+  font-size: 20px !important;
+  margin-left: 10px;
+}
+
+.Home_IconBox h6 {
+  font-size: 18px !important;
+}
+
+.Home_IconBox p {
+  font-size: 12px !important;
+}
+
+/* Home Page css Close */
+
+/* About Page css start */
+
+.VissionMissionSection::before {
+  @apply absolute h-full w-full bg-black opacity-40 left-0 right-0 top-0 bottom-0 z-[2];
+}
+
+.approachSection {
+  @apply !bg-[#213A6FCC] !pb-10;
+}
+
+.VissionMissionSection,
+.approachSection {
+  @apply relative py-[60px] xl:py-20;
+}
+
+.AccordionRow .AccordionImage {
+  @apply w-full h-full max-h-[350px] lg:max-h-[400px] xl:max-h-[500px] object-cover pr-0 md:pr-5;
+}
+
+.AccordionRow {
+  @apply flex justify-between flex-wrap;
+}
+
+.AccordionRow .Accordionheading {
+  @apply flex justify-between gap-5 items-center text-[16px] xl:text-[18px] leading-[1.3] font-normal;
+}
+
+.AccordionRow .Accordionheading span {
+  @apply text-[#A89C6C] font-light text-[16px] xl:text-[18px];
+}
+
+.AccordionRow .AccordionParaGraph {
+  @apply overflow-x-hidden !overflow-y-scroll;
+}
+
+.AccordionRow .accordion {
+  @apply cursor-pointer py-5 xl:py-10 px-5 border-b-2 border-[#A89C6C3D] relative;
+}
+
+.AccordionRow .accordion:last-child {
+  @apply border-none;
+}
+
+.teamMember .teamParagraph {
+  @apply text-[12px] leading-normal font-light text-white h-[250px] md:h-[170px] lg:h-[200px] overflow-y-scroll overflow-x-hidden absolute z-10 top-[20px] left-[20px] right-[20px];
+}
+
+/* About Page css end */
 
 /* About Team Section Start */
 
@@ -207,7 +413,15 @@ h6 {
 }
 
 .teamMember:hover .teamGradient {
-  @apply top-auto h-[120px] xl:h-[150px] bg-[#213A6F];
+  @apply top-auto h-full backdrop-blur-sm bg-[#213A6FCC] px-5 py-5;
+}
+
+.teamMember:hover .teamParagraph {
+  @apply opacity-100;
+}
+
+.teamMember .teamParagraph {
+  @apply opacity-0 transition-all ease-in-out duration-1000;
 }
 
 .teamMember:hover .arrow {
@@ -215,24 +429,24 @@ h6 {
 }
 
 /* .scrollParagraph {
-  overflow-x: hidden;
+overflow-x: hidden;
 }
 
 .scrollParagraph::-webkit-scrollbar {
-  width: 20px;
-  height: 50px;
+width: 20px;
+height: 50px;
 }
 
 .scrollParagraph::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: #213A6F;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+background: #213A6F;
 }
 
 .scrollParagraph::-webkit-scrollbar-track {
-  background-color: transparent;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+background-color: transparent;
+-webkit-border-radius: 10px;
+border-radius: 10px;
 } */
 
 /* About Team Section CLose */
@@ -292,7 +506,7 @@ h6 {
 
 .Banner_overlay::before {
   content: "";
-  @apply absolute h-full w-full bg-black opacity-35 left-0 right-0 top-0 bottom-0 z-[2];
+  @apply absolute h-full w-full bg-black opacity-35 left-0 right-0 top-0 bottom-0 z-[0];
 }
 
 .Custom_Slider .swiper-wrapper {
@@ -303,14 +517,16 @@ h6 {
   @apply !m-0 w-full rounded-none;
 }
 
-.Custom_Slider
-  .swiper-pagination
-  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.Custom_Slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   @apply bg-black;
 }
 
 .Custom_Slider .swiper-pagination {
   @apply flex flex-nowrap;
+}
+
+.BoxContent:hover .arroweffect {
+  @apply gap-4;
 }
 
 /* Banner Css Close */
@@ -321,7 +537,16 @@ h6 {
   @apply relative pl-28;
 }
 
+.lineeffect {
+  @apply relative pl-24;
+}
+
 .subHeading::before {
+  content: "";
+  @apply absolute left-0 w-20 h-[1px] bg-themeDarkBeige top-[16px];
+}
+
+.lineeffect::before {
   content: "";
   @apply absolute left-0 w-20 h-[1px] bg-themeDarkBeige top-[16px];
 }
@@ -333,20 +558,40 @@ h6 {
 form .flex input,
 form textarea {
   width: calc(50% - 20px);
-  @apply py-3 px-5 text-base font-medium border font-raleway border-themeDarkBeige rounded-[40px] bg-transparent outline-none text-black;
+  @apply py-3 px-5 text-sm font-normal border font-raleway border-themeDarkBeige rounded-[40px] bg-transparent outline-none text-themeDarkBeige;
 }
 
-form textarea {
+.RegisterMainSection form .flex input,
+.RegisterMainSection form textarea {
+  width: calc(50% - 20px);
+  @apply py-3 px-5 text-sm font-normal border font-raleway border-[#FFFFFF3D] rounded-[40px] bg-[#F3F0E729] outline-none text-white;
+}
+
+form textarea,
+.RegisterMainSection form textarea {
   @apply w-full;
 }
 
 form .flex input::placeholder,
 form textarea::placeholder {
-  @apply text-black opacity-30 font-raleway;
+  @apply text-themeDarkBeige opacity-100 font-raleway;
+}
+
+.RegisterMainSection form .flex input::placeholder,
+.RegisterMainSection form textarea::placeholder {
+  @apply text-white opacity-100 font-raleway;
 }
 
 .Detail_Slider {
   width: calc(100vw - 50px);
+}
+
+.RegisterMainSection.overlay::before {
+  @apply -z-[10];
+}
+
+.Contact_Icons svg {
+  @apply !text-[20px] text-themeDarkBeige;
 }
 
 /* Register Section Css Close */
@@ -354,15 +599,15 @@ form textarea::placeholder {
 /* Footer Css Start */
 
 .Footer_Menu a {
-  @apply text-xl text-white font-medium hover:text-themeDarkBeige Fast_animate;
+  @apply text-base text-white font-normal hover:text-themeDarkBeige Fast_animate;
 }
 
 .Footer_Menu ul {
-  @apply flex flex-col gap-3;
+  @apply flex flex-col gap-2;
 }
 
 .footer_Form {
-  @apply border border-themeDarkBeige bg-[#A89C6C14] rounded-full p-2 flex mt-9;
+  @apply border border-themeDarkBeige bg-[#A89C6C14] rounded-full p-2 flex;
 }
 
 .footer_Form input {
@@ -377,6 +622,19 @@ form textarea::placeholder {
   @apply border border-themeDarkBeige rounded-full text-themeDarkBeige py-3 px-10 hover:text-white hover:bg-themeDarkBeige Fast_animate;
 }
 
+.Contact_Icons {
+  width: calc(50% - 20px);
+}
+
+.Media_Cards {
+  @apply flex justify-between;
+}
+
+
+.Media_Cards .MediaCard {
+  width: calc(33% - 20px);
+}
+
 /* Footer Css Close */
 
 /* responsive Css Start */
@@ -385,6 +643,11 @@ form textarea::placeholder {
   .container {
     max-width: 1280px;
   }
+
+  /* .dropdown {
+    @apply left-[10%]
+  } */
+
 }
 
 @media (max-width: 1320px) {
@@ -397,11 +660,26 @@ form textarea::placeholder {
   .Logo_Section {
     width: calc(50% - 20px) !important;
   }
+
+  .Contact_Icons {
+    width: 100%;
+  }
+
+  /* .dropdown {
+    @apply left-[6%] max-w-[200px]
+  } */
+
 }
 
 @media (max-width: 1024px) {
-  .HeaderLinks h3 {
+
+  .HeaderLinks h3,
+  .About_Section_Counter h4 {
     @apply text-[30px];
+  }
+
+  .Home_IconBox .iconBox {
+    width: calc(50% - 20px);
   }
 
   .Header_Bottom_Bar .Our-Policies a {
@@ -415,23 +693,23 @@ form textarea::placeholder {
 
 @media (max-width: 991px) {
   h1 {
-    @apply text-[65px];
+    @apply text-[63px];
   }
 
   h2 {
-    @apply text-[60px];
+    @apply text-[58px];
   }
 
   h3 {
-    @apply text-[50px];
+    @apply text-[48px];
   }
 
   h4 {
-    @apply text-[42px];
+    @apply text-[40px];
   }
 
   h6 {
-    @apply text-[24px];
+    @apply text-[22px];
   }
 
   .hide_Br h2 {
@@ -466,6 +744,14 @@ form textarea::placeholder {
   .Connect_page h1 {
     @apply text-[60px] leading-[1.3];
   }
+
+  .Home_IconBox .PopUp_Box {
+    width: calc(33% - 20px);
+  }
+
+  .Home_IconBox .iconBox {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -486,7 +772,7 @@ form textarea::placeholder {
   }
 
   h6 {
-    @apply text-[24px];
+    @apply text-[20px];
   }
 
   .hide_Br h2 {
@@ -507,11 +793,11 @@ form textarea::placeholder {
   }
 
   .Main-Menu a {
-    @apply !text-[46px] !leading-[1.3];
+    @apply !text-[20px] !leading-[1.3] !font-normal;
   }
 
   .Main-Menu a.Btn {
-    @apply !text-[30px] !leading-[1.3];
+    @apply !text-[30px] !leading-[1.3] !font-normal;
   }
 
   .Footer_upper .footer_Block,
@@ -526,17 +812,130 @@ form textarea::placeholder {
   .Connect_page h1 {
     @apply text-[46px] leading-[1.3];
   }
+
   .Footer_upper .footer_Block,
   .Footer_upper .footer_Block.Newsletter,
-  .Logo_Section {
+  .Logo_Section,
+  .Home_IconBox .iconBox,
+  .Home_IconBox .PopUp_Box {
     width: calc(100% - 0px) !important;
   }
+
+  .navigation ul li .mobilePristineItem {
+    @apply !text-[25px] opacity-70 transition-all ease-in-out duration-500
+  }
+
+  .navigation ul li .mobilePristineItem:hover {
+    @apply opacity-100 !text-[46px]
+  }
+
+  .navigation {
+    width: 34%;
+  }
+
+  .dropdown {
+    left: 6%;
+    max-width: 100%;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    padding: 10px;
+    background: transparent;
+    top: 20px;
+  }
+
+  .dropdown svg {
+    @apply !text-white !rotate-0;
+  }
+
+  .DropDownHover svg {
+    transform: rotate(-90deg);
+  }
+
+  .paragraph {
+    font-size: 14px;
+  }
+
+  .About_Section_Counter h4 {
+    @apply w-full !text-[28px];
+  }
+
+  .About_Section_Counter span {
+    font-size: 24px !important;
+    @apply !text-[24px];
+  }
+
+  .about_img {
+    @apply w-full h-full;
+
+    img {
+      @apply w-full h-full;
+    }
+  }
+
+  .PortfolioSection div {
+    width: calc(40% - 20px);
+  }
+
+  .subHeading::before {
+    width: 3rem;
+  }
+
+  .SectionPopup .subHeading,
+  .SectionPopup p,
+  .spotlightSection .subHeading,
+  .RegisterMainSection .subHeading,
+  .RegisterMainSection p,
+  .subHeading {
+    padding-left: 4rem;
+  }
+
+  .Cta_Section {
+    @apply flex-nowrap;
+  }
+
+  .spotlightSection h6 {
+    @apply text-xl;
+  }
+
+  .approachSection h2 br {
+    @apply hidden;
+  }
+
+  .Media_Cards .MediaCard {
+    width: calc(50% - 20px);
+  }
+
+  .SectionPopup .PopUpCard {
+    height: 600px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
 }
 
 @media (max-width: 410px) {
   .about_img {
     @apply !w-[90%];
   }
+
+  .Cta_Section {
+    @apply flex-wrap;
+  }
+}
+
+@media(max-width:550px){
+  .Media_Cards .MediaCard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 330px) {
+  .navigation ul li a {
+    font-size: 35px !important;
+    line-height: 1.25rem;
+  }
+
+
 }
 
 /* Responsive Css Close */

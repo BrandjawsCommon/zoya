@@ -1,16 +1,16 @@
 
 
 import React from 'react';
-// import Header from '../Components/Header/Header';
-// import Footer from '../Components/Footer/Footer';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 
 const Layout = ({ children, }) => {
   return (
     <>
-    {/* <Header /> */}
+    <Header />
     {children}  
-    {/* <Footer /> */}
+    <Footer />
     </>
   );
 }
