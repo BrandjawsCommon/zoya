@@ -9,61 +9,56 @@ import { IoLocationOutline } from "react-icons/io5";
 import Image from "next/image";
 import NewsletterForm from "../NewsletterForm/Newsletterform";
 
-const Footer = () => {
+const Footer = ({ HeaderData }) => {
+  // console.log(HeaderData, "HeaderData");
+
   return (
     <section className="footer py-16 pb-0 bg-themeLapisBlue">
       <div className="container">
         <div className="flex Footer_upper gap-8">
           <div className="Logo_Section w-[33%] pr-16">
             <Link href="/">
-              {/* <img
+              <img
                 className="w-[150px] object-contain"
-                src="/White_logo.png"
+                src={HeaderData.whitelogo.url}
                 alt="Logo"
-              /> */}
-              <Image
-                src="/White_logo.png"
-                alt="Logo"
-                width={150}
-                height={150}
               />
             </Link>
             <p className="text-sm text-white font-light my-8">
-              Welcome to Zoya Developments, Where people always come first and
-              Where every experience contributes to a lasting legacy.
+              {HeaderData.abouttext}
             </p>
             <Link
               className="text-white font-normal text-base hover:text-themeDarkBeige Fast_animate"
               href="#."
             >
-              Privacy Policy
+              {HeaderData.privacytext}
             </Link>
           </div>
           <div className="footer_Block Footer_Menu w-[14%]">
             <h4 className="text-white font-medium uppercase text-lg mb-4">
-              Quick Links
+              {HeaderData.quicklinks}
             </h4>
             <ul>
               <li>
-                <Link href="/">Home</Link>
+                <Link href="/">{HeaderData.hometext}</Link>
               </li>
               <li>
-                <Link href="/about">About</Link>
+                <Link href="/about">{HeaderData.storytext}</Link>
               </li>
               <li>
-                <Link href="/pristine-zoya">Properties</Link>
+                <Link href="/pristine-zoya">{HeaderData.property}</Link>
               </li>
               <li>
-                <Link href="/media-center">Media Center</Link>
+                <Link href="/media-center">{HeaderData.media}</Link>
               </li>
               <li>
-                <Link href="/contact-us">Contact Us</Link>
+                <Link href="/contact-us">{HeaderData.connecttext}</Link>
               </li>
             </ul>
           </div>
           <div className="footer_Block w-[26%] flex flex-col gap-[10px] md:gap-[14px] pr-16">
             <h4 className="text-white font-medium uppercase text-lg mb-4">
-              Contact Us
+              {HeaderData.connecttext}
             </h4>
             <p className="text-white font-normal text-base flex items-start gap-2">
               <span className="text-themeDarkBeige hover:text-white Fast_animate cursor-pointer">
@@ -72,10 +67,10 @@ const Footer = () => {
 
               <Link
                 className="hover:text-themeDarkBeige Fast_animate mt-[-4px]"
-                href="mailto:Info@zoyadevelopments.ae"
+                href={`mailto:${HeaderData.mail}`}
                 target="_blank"
               >
-                Info@zoyadevelopments.ae
+                {HeaderData.mail}
               </Link>
             </p>
             <p className="text-white font-normal text-base flex items-center gap-2">
@@ -84,9 +79,9 @@ const Footer = () => {
               </span>
               <Link
                 className="hover:text-themeDarkBeige Fast_animate"
-                href="tel:+97145534816"
+                href={`tel:${HeaderData.contact}`}
               >
-                +97145534816
+                {HeaderData.contact}
               </Link>
             </p>
             <p className="text-white font-normal text-base flex items-start gap-2">
@@ -96,33 +91,27 @@ const Footer = () => {
 
               <Link
                 className="hover:text-themeDarkBeige Fast_animate mt-0 md:mt-[-4px]"
-                href="https://maps.app.goo.gl/5Uf6FGqw1jzFDe7u8?g_st=iw"
+                href={`${HeaderData.maplink}`}
                 target="_blank"
-              >
-                P02, P03, Building 3, Bay Square, Business Bay, Dubai, United Arab Emirates.
-                <br />
-                P.0 Box: 117993
+              > 
+                {HeaderData.location}
               </Link>
             </p>
           </div>
           <div className="footer_Block Newsletter w-[35%]">
             <h4 className="text-white font-medium uppercase text-lg mb-4">
-              Subscribe to our newsletter
+            {HeaderData.newslettertitle}
             </h4>
             <p className="text-base text-white font-light">
-              Join our newsletter to keep up to date with us!
+            {HeaderData.newslettertext}
             </p>
-            <NewsletterForm/>
-            {/* <div className="footer_Form my-7">
-              <input type="text" placeholder="Enter your email address" />
-              <button>Subscribe</button>
-            </div> */}
+            <NewsletterForm />
 
             <div className="Icons">
               <ul className="flex flex-wrap gap-5">
                 <li>
                   <Link
-                    href="https://www.facebook.com/zoya.developments"
+                    href={HeaderData.socialsCollection.items[0].link}
                     target="_blank"
                   >
                     <FaFacebookF />
@@ -130,7 +119,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="https://www.instagram.com/zoya.developments/"
+                    href={HeaderData.socialsCollection.items[1].link}
                     target="_blank"
                   >
                     <PiInstagramLogoFill />
@@ -138,7 +127,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="https://www.linkedin.com/company/zoya-developments/"
+                    href={HeaderData.socialsCollection.items[2].link}
                     target="_blank"
                   >
                     <FaLinkedinIn />
@@ -152,15 +141,7 @@ const Footer = () => {
       <div className="BottomBar bg-themeSoftPeach py-5 mt-12 md:mt-20 flex justify-between flex-wrap gap-7 md:gap-0">
         <div className="container">
           <p className="text-themeLapisBlue font-normal text-base font-raleway text-center">
-            Copyright © 2024,{" "}
-            <Link
-              href="/"
-              className="text-themeLapisBlue font-normal text-base font-raleway text-center"
-            >
-              {" "}
-              ZOYA.
-            </Link>{" "}
-            All rights reserved.
+            {HeaderData.crtext}
           </p>
         </div>
       </div>

@@ -6,7 +6,6 @@ const Bookviewform = ({ togglePopup }) => {
   const [utmParams, setUtmParams] = useState({});
 
   useEffect(() => {
-    // Capture UTM parameters from the URL
     const params = new URLSearchParams(window.location.search);
     const utms = {
       utm_source: params.get("utm_source") || "",
@@ -55,12 +54,12 @@ const Bookviewform = ({ togglePopup }) => {
       email_id,
       company_name,
       message,
-      ...utmParams, // Include captured UTM parameters in the submission data
+      ...utmParams, 
     };
 
     try {
       const response = await fetch(
-        "https://hooks.zapier.com/hooks/catch/4631356/26mkfvw/", // Updated Zapier webhook URL
+        "https://hooks.zapier.com/hooks/catch/4631356/26mkfvw/",
         {
           method: "POST",
           body: JSON.stringify(data),
