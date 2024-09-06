@@ -556,15 +556,54 @@ border-radius: 10px;
 /* Register Section Css Start */
 
 form .flex input,
+form input,
 form textarea {
   width: calc(50% - 20px);
   @apply py-3 px-5 text-sm font-normal border font-raleway border-themeDarkBeige rounded-[40px] bg-transparent outline-none text-themeDarkBeige;
 }
 
-.RegisterMainSection form .flex input,
+.phoneField {
+  width: calc(50% - 20px);
+}
+
+.phoneField .selected-flag,
+.react-tel-input .selected-flag,
+.flag-dropdown {
+  @apply !border-none outline-none;
+}
+
+.phoneField .flag-dropdown {
+  border-right: 1px solid #a89c6c !important;
+}
+
+.phoneField .react-tel-input .flag-dropdown,
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus,
+.react-tel-input .flag-dropdown.open .selected-flag {
+  @apply !bg-transparent;
+}
+
+.phoneField .react-tel-input .form-control {
+  border-color: rgb(168 156 108 / var(--tw-border-opacity));
+  @apply !w-full !h-auto !bg-transparent rounded-[50px];
+}
+
+form input::placeholder {
+  color: rgb(168 156 108 / var(--tw-text-opacity)) !important;
+}
+
+.RegisterMainSection form input::placeholder {
+  color: #fff !important;
+}
+
+.RegisterMainSection form input,
 .RegisterMainSection form textarea {
   width: calc(50% - 20px);
   @apply py-3 px-5 text-sm font-normal border font-raleway border-[#FFFFFF3D] rounded-[40px] bg-[#F3F0E729] outline-none text-white;
+}
+
+.RegisterMainSection .phoneField .react-tel-input .form-control {
+  @apply !border-[#FFFFFF3D] rounded-[40px] !bg-[#F3F0E729];
 }
 
 form textarea,
@@ -572,12 +611,12 @@ form textarea,
   @apply w-full;
 }
 
-form .flex input::placeholder,
+form input::placeholder,
 form textarea::placeholder {
   @apply text-themeDarkBeige opacity-100 font-raleway;
 }
 
-.RegisterMainSection form .flex input::placeholder,
+.RegisterMainSection form input::placeholder,
 .RegisterMainSection form textarea::placeholder {
   @apply text-white opacity-100 font-raleway;
 }
@@ -737,7 +776,8 @@ form textarea::placeholder {
   }
 
   form .flex input,
-  form textarea {
+  form textarea,
+  .phoneField {
     @apply !w-full;
   }
 

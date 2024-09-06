@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const BrochureForm = ({ togglePopup }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [utmParams, setUtmParams] = useState({});
+  const [phone, setPhone] = useState("");
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -37,11 +40,19 @@ const BrochureForm = ({ togglePopup }) => {
     const formData = new FormData(event.target);
     const first_name = formData.get("first_name").trim();
     const last_name = formData.get("last_name").trim();
-    const email_id = formData.get("email_id").trim();
+    const phone_id = formData.get("phone_id").trim();
     const company_name = formData.get("company_name").trim();
+    const email_id = formData.get("email_id").trim();
     const message = formData.get("message").trim();
 
-    if (!first_name || !last_name || !email_id || !company_name || !message) {
+    if (
+      !first_name ||
+      !last_name ||
+      !phone_id ||
+      !company_name ||
+      !email_id ||
+      !message
+    ) {
       alert("All fields are required. Please fill out the entire form.");
       return;
     }
@@ -51,15 +62,16 @@ const BrochureForm = ({ togglePopup }) => {
     const data = {
       first_name,
       last_name,
-      email_id,
+      phone_id,
       company_name,
+      email_id,
       message,
-      ...utmParams, 
+      ...utmParams,
     };
 
     try {
       const response = await fetch(
-        "https://hooks.zapier.com/hooks/catch/4631356/24j8kcg/", 
+        "https://hooks.zapier.com/hooks/catch/4631356/24j8kcg/",
         {
           method: "POST",
           body: JSON.stringify(data),
@@ -72,13 +84,16 @@ const BrochureForm = ({ togglePopup }) => {
 
       const result = await response.json();
       console.log("Data Sent Successfully!");
-      // console.log("Response from server:", result);
       event.target.reset();
       setShowPopup(true);
     } catch (error) {
       console.error("Error sending data:", error);
       alert("There was an error submitting the form. Please try again.");
     }
+  };
+
+  const handlePhoneChange = (value) => {
+    setPhone(value);
   };
 
   return (
@@ -99,12 +114,18 @@ const BrochureForm = ({ togglePopup }) => {
           />
         </div>
         <div className="flex justify-between flex-wrap my-8">
-          <input
-            placeholder="Email Address"
-            type="email"
-            id="email_id"
-            name="email_id"
-          />
+          <div className="phoneField">
+            <PhoneInput
+              country={"us"} // Default country code
+              value={phone}
+              onChange={handlePhoneChange}
+              inputProps={{
+                name: "phone_id",
+                required: true,
+                autoFocus: true,
+              }}
+            />
+          </div>
           <input
             placeholder="Company Name"
             type="text"
@@ -112,6 +133,13 @@ const BrochureForm = ({ togglePopup }) => {
             name="company_name"
           />
         </div>
+        <input
+          className="mb-8 w-full"
+          placeholder="Email Address"
+          type="email"
+          id="email_id"
+          name="email_id"
+        />
         <textarea
           id="message"
           name="message"
